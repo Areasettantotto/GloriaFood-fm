@@ -1,6 +1,5 @@
 {
   "name": "Da Anna",
-  "payoff": "Ristorante Italiano e specialità tipiche Cinesi",
   "address": "Viale Fiume 2",
   "city": "Mantova",
   "phone": "+390376123456",
@@ -11,5 +10,10 @@
   "view_menu_image": true,
   "facebook_link": "https://www.facebook.com/",
   "instagram_link": "https://www.instagram.com/",
-  "twitter_link": "https://www.twitter.com/"
+  "twitter_link": "https://www.twitter.com/",
+  "home_helmet_title": "Bar Ristorante Da Anna",
+  "home_helmet_payoff": "Ristorante Cinese con cucina tradizionale italiana",
+  "home_banner_title": "Ristorante Italiano e Cinese",
+  "home_banner_subtitle": "Scopri i nostri aperitivi anche da asporto!",
+  "home_content_subtitle": "Esplora alcune delle nostre specialità e piatti preparati con passione."
 }

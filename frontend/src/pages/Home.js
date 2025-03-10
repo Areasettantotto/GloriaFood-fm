@@ -60,29 +60,26 @@ function Home() {
     >
       <HelmetProvider>
         <Helmet>
-          <title>Ristorante {siteConfig.name} - Homepage</title>
-          <meta name="description" content={siteConfig.payoff} />
+          <title>{siteConfig.home_helmet_title}</title>
+          <meta name="description" content={siteConfig.home_helmet_payoff} />
         </Helmet>
       </HelmetProvider>
 
       {/* Componente Banner */}
       <Banner
-        mediaType="video" // 'image', 'video' o 'lottie'
-        bannerHeight="100%"
-        title={`Benvenuti ${siteConfig.name}`}
-        description={siteConfig.payoff}
+        mediaType="video" // image, video
+        bannerHeight="100%" // altezza del banner: 100%, 70%, 30%
+        title={siteConfig.home_banner_title}
+        description={siteConfig.home_banner_subtitle}
       />
 
       {/* Sezione contenuto */}
       <div className="bg-gray-100 py-12">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl font-semibold">
-            Bar Ristorante {siteConfig.name}
+            {siteConfig.home_helmet_title}
           </h2>
-          <p className="mt-4 text-lg">
-            Esplora alcune delle nostre specialità e piatti preparati con
-            passione.
-          </p>
+          <p className="mt-4 text-lg">{siteConfig.home_content_subtitle}</p>
         </div>
 
         {/* Gallery */}
@@ -100,16 +97,16 @@ const Gallery = () => (
         '/images/home-pizza.png',
         '/images/home-pizza.png',
         '/images/home-pizza.png',
+        /*'/images/home-pizza-background.png',
         '/images/home-pizza-background.png',
-        '/images/home-pizza-background.png',
-        '/images/home-pizza-background.png',
+        '/images/home-pizza-background.png',*/
       ].map((src, index) => (
         <img
           key={index}
           src={src}
           alt={`Piatto ${index + 1}`}
           className={`w-full h-auto object-cover rounded-lg ${
-            index >= 3 ? 'shadow-md' : 'App-logo'
+            index >= 3 ? 'shadow-md' : 'App-logo' // classe effetto round
           }`}
         />
       ))}

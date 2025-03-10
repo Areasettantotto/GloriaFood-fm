@@ -61,7 +61,7 @@ function Contatti() {
     >
       <HelmetProvider>
         <Helmet>
-          <title>Ristorante {siteConfig.name} - Contatti</title>
+          <title>{siteConfig.home_helmet_title} - Contatti</title>
           <meta name="description" content={siteConfig.payoff} />
         </Helmet>
       </HelmetProvider>

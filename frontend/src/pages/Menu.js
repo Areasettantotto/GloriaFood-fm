@@ -93,7 +93,7 @@ const Menu = () => {
       >
         <HelmetProvider>
           <Helmet>
-            <title>Ristorante {siteConfig.name} - Menù</title>
+            <title>{siteConfig.home_helmet_title} - Menù</title>
             <meta name="description" content={siteConfig.payoff} />
           </Helmet>
         </HelmetProvider>
