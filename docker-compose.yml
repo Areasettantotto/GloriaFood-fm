@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app  # Sincronizza il codice tra locale e container
+      - /app/node_modules  # Evita conflitti con node_modules
+    depends_on:
+      - backend
+    environment:
+      - NODE_ENV=development  # Assicura che React supporti gli aggiornamenti live
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./backend:/app  # Sincronizza il codice tra locale e container
+      - /app/node_modules  # Evita conflitti con node_modules
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development  # Attiva nodemon per il backend

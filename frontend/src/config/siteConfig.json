@@ -1,0 +1,15 @@
+{
+  "name": "Da Anna",
+  "payoff": "Ristorante Italiano e specialità tipiche Cinesi",
+  "address": "Viale Fiume 2",
+  "city": "Mantova",
+  "phone": "+390376123456",
+  "email": "areasettantotto@icloud.com",
+  "whatsapp" : "+393488845855",
+  "button_pay": "https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=dc876bd2-b447-430b-b9d0-c056f8ffbda3",
+  "button_reservation": "https://www.foodbooking.com/ordering/restaurant/menu/reservation?restaurant_uid=dc876bd2-b447-430b-b9d0-c056f8ffbda3&reservation=true",
+  "view_menu_image": true,
+  "facebook_link": "https://www.facebook.com/",
+  "instagram_link": "https://www.instagram.com/",
+  "twitter_link": "https://www.twitter.com/"
+}

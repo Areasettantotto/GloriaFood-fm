@@ -1,0 +1,37 @@
+/* Importa le basi di Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* I tuoi stili personalizzati */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Animazione del logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.loader {
+  @apply w-12 h-12 border-4 border-t-accent border-solid rounded-full animate-spin;
+}
