@@ -88,7 +88,9 @@ const ContactSection = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center">{siteConfig.name}</h1>
+      <h1 className="text-3xl font-bold text-center">
+        {siteConfig.home_helmet_title}
+      </h1>
       <p className="text-center mt-4">{siteConfig.payoff}</p>
       {/* Aggiungi una riga con tre colonne per i pulsanti */}
       <div className="mt-6 text-center grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -144,7 +146,8 @@ const ContactSection = () => {
       <div className="text-center mt-4">
         {allDaysSameHours ? (
           <p className="text-sm">
-            Lunedì/Domenica: {siteConfig.contact_opening_hours[0].hours}
+            Aperto tutti i giorni dalle:{' '}
+            {siteConfig.contact_opening_hours[0].hours}
           </p>
         ) : (
           <table className="table-auto mx-auto">

@@ -33,7 +33,7 @@ const Footer = () => {
         {/* Colonna destra: Info */}
         <div className="text-sm text-center sm:text-left mt-4 sm:mt-0">
           <p>
-            &copy; {new Date().getFullYear()} - Ristorante {siteConfig.name} -{' '}
+            &copy; {new Date().getFullYear()} - {siteConfig.home_helmet_title} -{' '}
             {siteConfig.address} - {siteConfig.city}
           </p>
         </div>
