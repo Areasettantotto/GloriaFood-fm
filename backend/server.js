@@ -61,6 +61,10 @@ app.get('/api/menu', async (req, res) => {
     const menu = response.data;
 
     // Elaborazione delle categorie e degli elementi del menu
+    menu.categories = menu.categories.filter(
+      (category) => category.active && (!category.hidden_until || moment().isAfter(category.hidden_until))
+    );
+
     menu.categories.forEach((category) => {
       // Filtra gli elementi attivi e non nascosti
       category.items = category.items.filter(

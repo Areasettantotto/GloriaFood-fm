@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import moment from 'moment'
 import useSWR from 'swr'
 import siteConfig from '../config/siteConfig.json'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
@@ -47,7 +48,12 @@ const Menu = () => {
   // Imposta la categoria selezionata iniziale
   useEffect(() => {
     if (menu && !selectedCategory) {
-      setSelectedCategory(menu.categories[0]?.id)
+      const firstVisibleCategory = menu.categories.find(
+        (category) =>
+          category.active &&
+          (!category.hidden_until || moment().isAfter(category.hidden_until)),
+      )
+      setSelectedCategory(firstVisibleCategory?.id)
     }
   }, [menu, selectedCategory])
 
