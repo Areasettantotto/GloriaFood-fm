@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import siteConfig from '../config/siteConfig.json' // Info attività
+import siteConfig from '../config/siteConfig.json' // Info ristorante
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import Banner from '../components/Banner' // Banner component
@@ -68,9 +68,9 @@ function Contatti() {
 
       {/* Sezione Banner */}
       <Banner
-        mediaType="video" // Può essere 'image', 'video' o 'lottie'
+        mediaType="video" // Può essere 'image' o video
         bannerHeight="30%"
-        title="Contatti"
+        title={siteConfig.contact_banner_title}
         showLogo={false} // Escludi il logo
       />
 
@@ -81,59 +81,86 @@ function Contatti() {
 }
 
 // Componente separato per la sezione contatti
-const ContactSection = () => (
-  <div className="container mx-auto p-4">
-    <h1 className="text-3xl font-bold text-center">{siteConfig.name}</h1>
-    <p className="text-center mt-4">{siteConfig.payoff}</p>
-    {/* Aggiungi una riga con tre colonne per i pulsanti */}
-    <div className="mt-6 text-center grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-          <FaPhone className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-          <p className="mt-2 text-sm">
-            Siamo aperti dalle ore 06:00 alle ore 24:00
+const ContactSection = () => {
+  const allDaysSameHours = siteConfig.contact_opening_hours.every(
+    (day) => day.hours === siteConfig.contact_opening_hours[0].hours,
+  )
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold text-center">{siteConfig.name}</h1>
+      <p className="text-center mt-4">{siteConfig.payoff}</p>
+      {/* Aggiungi una riga con tre colonne per i pulsanti */}
+      <div className="mt-6 text-center grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
+            <FaPhone className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+            <p className="mt-2 text-sm">
+              {siteConfig.contact_content_button_call}
+            </p>
+          </div>
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
+          >
+            {siteConfig.contact_lable_button_call}
+          </a>
+        </div>
+        <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
+            <FaEnvelope className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+            <p className="mt-2 text-sm">
+              {siteConfig.contact_content_button_email}
+            </p>
+          </div>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
+          >
+            {siteConfig.contact_lable_button_email}
+          </a>
+        </div>
+        <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
+            <FaWhatsapp className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+            <p className="mt-2 text-sm">
+              {siteConfig.contact_content_button_whatsapp}
+            </p>
+          </div>
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp}`}
+            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {siteConfig.contact_lable_button_whatsapp}
+          </a>
+        </div>
+      </div>
+      {/* Aggiungi una riga di testo sotto i pulsanti */}
+      <h2 className="text-2xl font-bold text-center mt-12">
+        {siteConfig.contact_opening_hours_title}
+      </h2>
+      <div className="text-center mt-4">
+        {allDaysSameHours ? (
+          <p className="text-sm">
+            Lunedì/Domenica: {siteConfig.contact_opening_hours[0].hours}
           </p>
-        </div>
-        <a
-          href={`tel:${siteConfig.phone}`}
-          className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-        >
-          Chiamaci
-        </a>
-      </div>
-      <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-          <FaEnvelope className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-          <p className="mt-2 text-sm">Rispondiamo entro 24 ore</p>
-        </div>
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-        >
-          Invia una mail
-        </a>
-      </div>
-      <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-          <FaWhatsapp className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-          <p className="mt-2 text-sm">Disponibile 24/7</p>
-        </div>
-        <a
-          href={`https://wa.me/${siteConfig.whatsapp}`}
-          className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contattaci su WhatsApp
-        </a>
+        ) : (
+          <table className="table-auto mx-auto">
+            <tbody>
+              {siteConfig.contact_opening_hours.map((day, index) => (
+                <tr key={index} className="text-sm">
+                  <td className="text-left pr-4">{day.day}</td>
+                  <td className="text-right">{day.hours}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
-    {/* Aggiungi una riga di testo sotto i pulsanti */}
-    <h2 className="text-2xl font-bold text-center mt-12">Contattaci</h2>
-    <p className="text-center mt-4">
-      Siamo qui per aiutarti con qualsiasi domanda o richiesta.
-    </p>
-  </div>
-)
+  )
+}
 
 export default Contatti

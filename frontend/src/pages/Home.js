@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import siteConfig from '../config/siteConfig.json' // Info attività
+import siteConfig from '../config/siteConfig.json' // Info ristorante
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import Banner from '../components/Banner' // Banner importato

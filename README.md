@@ -46,8 +46,7 @@ docker-compose down
 
 ## Configuration
 
-- Edit the `env.example.txt` file to customize the Home and Contact pages
-- If you use a database, configure the environment in the `.env` file
+- Rename the `env.example.txt` file to `.env` by inserting the API key provided by Gloriafood and configure the `siteConfig.json` file inside the /frontend/src/config/siteConfig.json directory, with the restaurant data.
 
 ## Contributions
 If you want to contribute to the project, feel free to fork it and submit a pull request!

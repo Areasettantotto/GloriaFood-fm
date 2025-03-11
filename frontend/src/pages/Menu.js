@@ -103,7 +103,7 @@ const Menu = () => {
           mediaType="video"
           mediaSrc="videos/menu.mp4"
           bannerHeight="30%"
-          title="Il nostro menù"
+          title={siteConfig.menu_banner_title}
           showLogo={false}
         />
 
