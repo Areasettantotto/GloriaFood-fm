@@ -47,13 +47,24 @@ const Menu = () => {
 
   // Imposta la categoria selezionata iniziale
   useEffect(() => {
-    if (menu && !selectedCategory) {
+    if (menu) {
       const firstVisibleCategory = menu.categories.find(
         (category) =>
           category.active &&
           (!category.hidden_until || moment().isAfter(category.hidden_until)),
       )
-      setSelectedCategory(firstVisibleCategory?.id)
+
+      if (
+        !selectedCategory ||
+        !menu.categories.some(
+          (category) =>
+            category.id === selectedCategory &&
+            category.active &&
+            (!category.hidden_until || moment().isAfter(category.hidden_until)),
+        )
+      ) {
+        setSelectedCategory(firstVisibleCategory?.id)
+      }
     }
   }, [menu, selectedCategory])
 
