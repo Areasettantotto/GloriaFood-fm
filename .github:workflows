@@ -3,7 +3,7 @@ name: Docker Deploy
 on:
   push:
     branches:
-      - main  # Sostituisci con il branch che desideri monitorare
+      - main  # Il branch che avvia il deploy
 
 jobs:
   build-and-deploy:
@@ -27,19 +27,23 @@ jobs:
         with:
           push: true
           tags: |
-            your-dockerhub-username/frontend:latest
-            your-dockerhub-username/backend:latest
+            areasettantotto/frontend-1:latest
+            areasettantotto/backend-1:latest
           context: .
-          file: ./docker-compose.yml
+          file: ./Dockerfile  # Usa il Dockerfile corretto
 
       - name: Deploy to server
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-        run: |
-          ssh -i $SSH_PRIVATE_KEY $USERNAME@$HOST << 'EOF'
-            cd /path/to/your/project
-            docker-compose pull
-            docker-compose up -d
-          EOF
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker pull areasettantotto/frontend-1:latest
+            docker pull areasettantotto/backend-1:latest
+            docker stop frontend-1 || true
+            docker stop backend-1 || true
+            docker rm frontend-1 || true
+            docker rm backend-1 || true
+            docker run -d -p 3000:3000 --name frontend-1 areasettantotto/frontend-1:latest
+            docker run -d -p 4000:4000 --name backend-1 areasettantotto/backend-1:latest
