@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   frontend:
     image: areasettantotto/frontend-1:latest  # Usa l'immagine pre-costruita di Docker Hub
