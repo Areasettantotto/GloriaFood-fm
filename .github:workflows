@@ -53,3 +53,5 @@ jobs:
             docker rm backend-1 || true
             docker run -d -p 3000:3000 --name frontend-1 areasettantotto/frontend-1:latest
             docker run -d -p 4000:4000 --name backend-1 areasettantotto/backend-1:latest
+            docker exec frontend-1 npm install
+            docker exec backend-1 npm install
