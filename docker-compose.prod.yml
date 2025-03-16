@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: areasettantotto/frontend-1:latest  # Usa l'immagine pre-costruita di Docker Hub
+    ports:
+      - "3000:3000"  # Espone la porta 3000 del container sulla porta 3000 della macchina
+    environment:
+      - NODE_ENV=production  # Imposta l'ambiente di produzione
+    restart: always  # Riavvia il container in caso di crash
+
+  backend:
+    image: areasettantotto/backend-1:latest  # Usa l'immagine pre-costruita di Docker Hub
+    ports:
+      - "4000:4000"  # Espone la porta 4000 del container sulla porta 4000 della macchina
+    env_file:
+      - .env  # Usa un file .env per le variabili d'ambiente
+    environment:
+      - NODE_ENV=production  # Imposta l'ambiente di produzione
+    restart: always  # Riavvia il container in caso di crash

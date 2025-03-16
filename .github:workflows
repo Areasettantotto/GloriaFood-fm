@@ -3,7 +3,7 @@ name: Docker Deploy
 on:
   push:
     branches:
-      - main  # Il branch che avvia il deploy
+      - main
 
 jobs:
   build-and-deploy:
@@ -22,16 +22,25 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker images
+      # Build and push FRONTEND
+      - name: Build and push frontend
         uses: docker/build-push-action@v2
         with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
           push: true
-          tags: |
-            areasettantotto/frontend-1:latest
-            areasettantotto/backend-1:latest
-          context: .
-          file: ./Dockerfile  # Usa il Dockerfile corretto
+          tags: areasettantotto/frontend-1:latest
 
+      # Build and push BACKEND
+      - name: Build and push backend
+        uses: docker/build-push-action@v2
+        with:
+          context: ./backend
+          file: ./backend/Dockerfile
+          push: true
+          tags: areasettantotto/backend-1:latest
+
+      # Deploy via SSH
       - name: Deploy to server
         uses: appleboy/ssh-action@v0.1.6
         with:

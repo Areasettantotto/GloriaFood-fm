@@ -3,28 +3,28 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend  # Directory del frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3000:3000"  # Espone la porta 3000 del container sulla porta 3000 della macchina
     volumes:
-      - ./frontend:/app  # Sincronizza il codice tra locale e container
-      - /app/node_modules  # Evita conflitti con node_modules
-    depends_on:
-      - backend
+      - ./frontend:/app  # Monta la cartella frontend locale dentro il container per lo sviluppo
+      - /app/node_modules  # Prevenire conflitti tra i node_modules locali e quelli nel container
     environment:
-      - NODE_ENV=development  # Assicura che React supporti gli aggiornamenti live
+      - NODE_ENV=development  # Imposta l'ambiente di sviluppo
+    depends_on:
+      - backend  # Assicura che il backend sia avviato prima del frontend
 
   backend:
     build:
-      context: ./backend
+      context: ./backend  # Directory del backend
       dockerfile: Dockerfile
     ports:
-      - "4000:4000"
+      - "4000:4000"  # Espone la porta 4000 del container sulla porta 4000 della macchina
     volumes:
-      - ./backend:/app  # Sincronizza il codice tra locale e container
-      - /app/node_modules  # Evita conflitti con node_modules
+      - ./backend:/app  # Monta la cartella backend locale dentro il container per lo sviluppo
+      - /app/node_modules  # Prevenire conflitti tra i node_modules locali e quelli nel container
     env_file:
-      - .env
+      - .env  # Usa un file .env per le variabili d'ambiente
     environment:
-      - NODE_ENV=development  # Attiva nodemon per il backend
+      - NODE_ENV=development  # Imposta l'ambiente di sviluppo
