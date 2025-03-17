@@ -1,5 +1,3 @@
-version: '1.25.0'
-
 services:
   frontend:
     image: areasettantotto/frontend-1:latest
