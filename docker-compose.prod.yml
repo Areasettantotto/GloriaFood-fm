@@ -1,0 +1,18 @@
+services:
+  frontend:
+    image: areasettantotto/frontend-1:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+
+  backend:
+    image: areasettantotto/backend-1:latest
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    restart: always
