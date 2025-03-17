@@ -28,6 +28,7 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: areasettantotto/frontend-1:latest
 
       - name: Build and push backend
@@ -36,6 +37,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: areasettantotto/backend-1:latest
 
       - name: Deploy to server
@@ -45,11 +47,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            cd /var/www/vhosts/tuo-dominio/httpdocs/app
             docker pull areasettantotto/frontend-1:latest
             docker pull areasettantotto/backend-1:latest
-            docker stop frontend-1 || true
-            docker stop backend-1 || true
-            docker rm frontend-1 || true
-            docker rm backend-1 || true
-            docker run -d -p 3000:3000 --name frontend-1 areasettantotto/frontend-1:latest
-            docker run -d -p 4000:4000 --name backend-1 areasettantotto/backend-1:latest
+            docker-compose -f docker-compose.prod.yml up -d --force-recreate

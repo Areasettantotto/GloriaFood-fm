@@ -5,7 +5,10 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+      - REACT_APP_API_URL=http://backend:4000
     restart: always
+    networks:
+      - app-network
 
   backend:
     image: areasettantotto/backend-1:latest
@@ -16,3 +19,9 @@ services:
     environment:
       - NODE_ENV=production
     restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
