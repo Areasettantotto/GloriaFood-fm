@@ -12,7 +12,7 @@ A small restaurant website based on GloriaFood API to extract and display the me
 - **Frontend**: React + Tailwind CSS
 - **Backend**: Node.js + Express
 - **Containerization**: Docker
-- **CI/CD**: Automatic synchronization of containers via GitHub
+- **CI/CD**: Continuous Integration/Continuous Deployment
 
 ## Installation
 
