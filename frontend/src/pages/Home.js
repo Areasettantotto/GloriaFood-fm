@@ -80,7 +80,7 @@ function Home() {
             {siteConfig.home_helmet_title}
           </h2>
           <p className="mt-4 text-lg">
-            {siteConfig.home_content_subtitle}, htcp
+            {siteConfig.home_content_subtitle}, ttt
           </p>
         </div>
 
