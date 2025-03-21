@@ -79,7 +79,7 @@ function Home() {
           <h2 className="text-3xl font-semibold">
             {siteConfig.home_helmet_title}
           </h2>
-          <p className="mt-4 text-lg">{siteConfig.home_content_subtitle}</p>
+          <p className="mt-4 text-lg">{siteConfig.home_content_subtitle}, jj</p>
         </div>
 
         {/* Gallery */}
