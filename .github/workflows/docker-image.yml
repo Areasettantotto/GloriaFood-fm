@@ -1,0 +1,53 @@
+name: CI/CD Pipeline - Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # Triggera il workflow solo quando fai push su `main` (o un altro branch specificato)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Usa l'immagine ubuntu per eseguire i comandi
+
+    steps:
+      # Step 1: Checkout del codice
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Login su Docker Hub
+      - name: Docker Login
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      # Step 3: Build dell'immagine del frontend
+      - name: Build frontend Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/frontend-1:latest ./frontend
+
+      # Step 4: Push dell'immagine del frontend su Docker Hub
+      - name: Push frontend Docker image to Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/frontend-1:latest
+
+      # Step 5: Build dell'immagine del backend
+      - name: Build backend Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-1:latest ./backend
+
+      # Step 6: Push dell'immagine del backend su Docker Hub
+      - name: Push backend Docker image to Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/backend-1:latest
+
+      # Step 7: Trigger del deploy su Render per il frontend
+      - name: Trigger Render Deploy for Frontend
+        run: |
+          curl -X POST https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID_FRONTEND }}/deploys \
+          -H "Accept: application/json" \
+          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}"
+
+      # Step 8: Trigger del deploy su Render per il backend
+      - name: Trigger Render Deploy for Backend
+        run: |
+          curl -X POST https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID_BACKEND }}/deploys \
+          -H "Accept: application/json" \
+          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}"
