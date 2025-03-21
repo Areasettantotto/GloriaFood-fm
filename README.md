@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-## Deployment with Docker
+## Deployment with Docker Compose (only local)
 
 1. Build and start the container:
 ```sh
