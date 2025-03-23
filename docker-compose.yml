@@ -1,0 +1,30 @@
+version: "3.9"  # Versione di Docker Compose, aggiornata per compatibilità massima
+
+services:
+  frontend:
+    build:
+      context: ./frontend  # Percorso della directory frontend
+      dockerfile: Dockerfile  # Dockerfile usato per il build
+    ports:
+      - "3000:3000"  # Porta host:container - React dev server sulla 3000
+    volumes:
+      - ./frontend:/app  # Monta codice locale nella container per hot reload
+      - /app/node_modules  # Evita conflitti tra node_modules host/container
+    environment:
+      - NODE_ENV=development  # Imposta la modalità di sviluppo per React
+    depends_on:
+      - backend  # Assicura che il backend parta prima del frontend
+
+  backend:
+    build:
+      context: ./backend  # Percorso della directory backend
+      dockerfile: Dockerfile  # Dockerfile usato per il build
+    ports:
+      - "4000:4000"  # Porta host:container - API server Node/Express
+    volumes:
+      - ./backend:/app  # Monta codice locale nella container per hot reload
+      - /app/node_modules  # Stesso discorso per node_modules
+    env_file:
+      - .env  # Usa il file .env dalla root per variabili ambiente (API Key GloriaFood ecc.)
+    environment:
+      - NODE_ENV=development  # Modalità sviluppo per backend
