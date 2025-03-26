@@ -33,6 +33,14 @@ npm install
 npm start
 ```
 
+#### Note: Create a .env file in the backend dir:
+
+```sh
+GLORIAFOOD_API_KEY=your_api_key_here
+GLORIAFOOD_API_URL=https://pos.globalfoodsoft.com/pos/menu
+PORT=4000
+```
+
 ### 🐳 2. Docker Compose (Local Only)
 
 1. Build and start the container:
@@ -42,14 +50,6 @@ docker-compose up --build -d
 2. To stop the containers:
 ```sh
 docker-compose down
-```
-
-#### Note: Create a .env file in the backend root:
-
-```sh
-GLORIAFOOD_API_KEY=your_api_key_here
-GLORIAFOOD_API_URL=https://pos.globalfoodsoft.com/pos/menu
-PORT=4000
 ```
 
 ### ☁️ 3. CI/CD with GitHub, Docker Hub, and Render (Production)
@@ -86,6 +86,7 @@ Menu data is automatically fetched from GloriaFood via API and managed directly 
 ## 📁 Project Structure (Overview)
 
 ```sh
+app
 /frontend         # React frontend
 /backend          # Node.js backend
 /docker-compose.yml
