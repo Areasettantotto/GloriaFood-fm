@@ -72,7 +72,7 @@ PORT=4000
 ```
 Frontend variable (Render):
 ```sh
-REACT_APP_BACKEND_URL=https://your-backend-service.onrender.com
+REACT_APP_BACKEND_URL=https://your-backend-service.com
 ```
 
 ## ⚙️ Site Configuration
@@ -87,10 +87,13 @@ Menu data is automatically fetched from GloriaFood via API and managed directly 
 
 ```sh
 app
-/frontend         # React frontend
-/backend          # Node.js backend
-/docker-compose.yml
-.env.example.txt  # Example environment variables
+/frontend           # React frontend directory
+/backend            # Node.js backend directory
+/.github-workflows  # CI/CD github/dockerhub/render
+docker-compose.yml  # Docker Compose (only local)
+.env.example.txt    # Example environment variables
+.gitignore
+.eslintignore
 ```
 
 ## 🤝 Contributions
