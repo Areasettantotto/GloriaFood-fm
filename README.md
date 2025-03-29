@@ -65,6 +65,7 @@ PORT=????
 Customize Home and Contact page data using:
 ```sh
 frontend/src/config/siteConfig.json
+frontend/src/config/config.js
 ```
 Menu data is automatically fetched from GloriaFood via API and managed directly by the restaurant staff through their GloriaFood admin panel.
 

@@ -12,7 +12,7 @@ import backendUrl from '../config/config.js'
 const apiEndpoint = `${backendUrl}/api/menu`
 
 // Debug: stampa l'URL usato
-console.log('Backend URL:', backendUrl)
+// console.log('Backend URL:', backendUrl)
 
 const fetcher = async (url) => {
   try {
