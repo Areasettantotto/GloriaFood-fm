@@ -73,9 +73,9 @@ Menu data is automatically fetched from GloriaFood via API and managed directly 
 
 ```sh
 app
-/frontend           # React frontend directory
-/backend            # Node.js backend directory
 /.github-workflows  # CI/CD github/dockerhub/render
+/backend            # Node.js backend directory
+/frontend           # React frontend directory
 .gitignore
 .eslintignore
 ```
