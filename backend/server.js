@@ -3,6 +3,7 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const moment = require('moment');
+const nutritionalMapping = require('./config/nutritionalValues'); // Importa la mappatura dei valori nutrizionali per recuperarle il nome del valore (non disponibile nel file json di Gloriafood)
 
 const app = express();
 
@@ -18,18 +19,6 @@ if (!API_KEY || !API_URL) {
   process.exit(1);
 }
 
-// Mappatura ID a nomi di valori nutrizionali
-const NUTRITIONAL_MAPPING = {
-  9: 'Calorie totali (kcal)',
-  10: 'Carboidrati',
-  11: 'Grassi',
-  12: 'Proteine',
-  13: 'Zuccheri',
-  14: 'Sale',
-  15: 'Pepe',
-  // Aggiungi qui altre corrispondenze come desiderato
-};
-
 // Funzione per mappare allergeni
 const mapAllergens = (allergens) => {
   return (
@@ -39,9 +28,9 @@ const mapAllergens = (allergens) => {
 
 // Funzione per mappare valori nutrizionali
 const mapNutritionalValues = (nutritionalValues, size) => {
-  const sizeLabel = size === 'per_100g' ? 'per 100g' : 'per porzione';
+  const sizeLabel = size === 'per_100g' ? 'per 100gg' : 'per porzione';
   const mappedValues = nutritionalValues.map((nutritional) => ({
-    name: NUTRITIONAL_MAPPING[nutritional.id] || `Valore #${nutritional.id}`,
+    name: nutritionalMapping[nutritional.id] || `Valore #${nutritional.id}`,
     value: nutritional.value || 'N/A',
   }));
   return { mappedValues, sizeLabel };
@@ -92,6 +81,14 @@ app.get('/api/menu', async (req, res) => {
           item.nutritionalValues = mappedValues;
           item.nutritionalSizeLabel = sizeLabel;
         }
+
+        // Preseleziona solo una variazione contrassegnata come predefinita e il cui prezzo è uguale al prezzo base
+        item.selectedSize = item.variations?.find(
+          (variation) => variation.default && variation.price === item.price
+        );
+
+        // Imposta displayPrice uguale al prezzo base dell'elemento
+        item.displayPrice = item.price;
       });
     });
 

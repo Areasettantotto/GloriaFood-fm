@@ -6,6 +6,7 @@ module.exports = {
         primary: '#282828',
         secondary: '#1F4B6E',
         accent: '#F59E0B',
+        active: '#4CAF50',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

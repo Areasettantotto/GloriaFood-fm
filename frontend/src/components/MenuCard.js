@@ -7,6 +7,7 @@ import {
   FaFire,
   FaLeaf,
   FaSeedling,
+  FaCog,
 } from 'react-icons/fa'
 import moment from 'moment'
 
@@ -14,6 +15,14 @@ const MenuCard = ({ item, showImage = true }) => {
   const [imageError, setImageError] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false) // Stato per il caricamento immagine
   const [activeSection, setActiveSection] = useState(null)
+  const [selectedSize, setSelectedSize] = useState(
+    item.sizes ? item.sizes.find((size) => size.default) || null : null,
+  )
+  // Coerce extras into an array
+  const extrasArray = Array.isArray(item.extras) ? item.extras : []
+  const [_selectedExtras] = useState(
+    extrasArray.filter((extra) => extra.default === true),
+  )
 
   const TAG_PROPERTIES = {
     hot: { label: 'Piccante', className: 'bg-red-500' },
@@ -59,6 +68,10 @@ const MenuCard = ({ item, showImage = true }) => {
   const toggleSection = (section) => {
     setActiveSection((prev) => (prev === section ? null : section))
   }
+
+  const displayPrice = selectedSize
+    ? item.price + selectedSize.price
+    : item.price
 
   return (
     <div
@@ -106,7 +119,14 @@ const MenuCard = ({ item, showImage = true }) => {
 
       {/* Dati principali */}
       <p className="font-medium mt-2 text-lg">{item.name}</p>
-      <p className="text-gray-500 mt-2 font-semibold">€ {item.price},00</p>
+      <p className="text-gray-500 mt-2 font-semibold">
+        € {displayPrice},00
+        {selectedSize && (
+          <span className="text-sm text-gray-500 ml-2">
+            {selectedSize.name}
+          </span>
+        )}
+      </p>
       <hr className="mt-4 border-gray-300" />
 
       {/* Tag Badge */}
@@ -130,54 +150,82 @@ const MenuCard = ({ item, showImage = true }) => {
       )}
 
       {/* Icone per mostrare dettagli */}
-      <div className="flex items-center space-x-4 mt-4">
-        {item.ingredients && (
-          <button
-            onClick={() => toggleSection('ingredients')}
-            className={`flex items-center transition-transform duration-300 ${
-              activeSection === 'ingredients'
-                ? 'scale-125 text-accent'
-                : 'scale-100 text-gray-500'
-            }`}
-          >
-            <FaUtensils className="text-2xl" title="Ingredienti" />
-          </button>
-        )}
-        {item.allergens?.length > 0 && (
-          <button
-            onClick={() => toggleSection('allergens')}
-            className={`flex items-center transition-transform duration-300 ${
-              activeSection === 'allergens'
-                ? 'scale-125 text-accent'
-                : 'scale-100 text-gray-500'
-            }`}
-          >
-            <FaAllergies className="text-2xl" title="Allergeni" />
-          </button>
-        )}
-        {item.nutritionalValues?.length > 0 && (
-          <button
-            onClick={() => toggleSection('nutritionalValues')}
-            className={`flex items-center transition-transform duration-300 ${
-              activeSection === 'nutritionalValues'
-                ? 'scale-125 text-accent'
-                : 'scale-100 text-gray-500'
-            }`}
-          >
-            <FaHeartbeat className="text-2xl" title="Valori Nutrizionali" />
-          </button>
-        )}
-        {item.additives && (
-          <button
-            onClick={() => toggleSection('additives')}
-            className={`flex items-center transition-transform duration-300 ${
-              activeSection === 'additives'
-                ? 'scale-125 text-accent'
-                : 'scale-100 text-gray-500'
-            }`}
-          >
-            <FaFlask className="text-2xl" title="Additivi" />
-          </button>
+      <div className="flex items-center mt-4">
+        <div className="flex items-center space-x-4">
+          {item.ingredients && (
+            <button
+              onClick={() => toggleSection('ingredients')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'ingredients'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaUtensils className="text-2xl" title="Ingredienti" />
+            </button>
+          )}
+          {item.allergens?.length > 0 && (
+            <button
+              onClick={() => toggleSection('allergens')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'allergens'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaAllergies className="text-2xl" title="Allergeni" />
+            </button>
+          )}
+          {item.nutritionalValues?.length > 0 && (
+            <button
+              onClick={() => toggleSection('nutritionalValues')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'nutritionalValues'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaHeartbeat className="text-2xl" title="Valori Nutrizionali" />
+            </button>
+          )}
+          {item.additives && (
+            <button
+              onClick={() => toggleSection('additives')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'additives'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaFlask className="text-2xl" title="Additivi" />
+            </button>
+          )}
+          {item.extras?.length > 0 && (
+            <button
+              onClick={() => toggleSection('extras')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'extras'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaFire className="text-2xl" title="Extras" />
+            </button>
+          )}
+        </div>
+        {item.sizes && item.sizes.length > 0 && (
+          <div className="ml-auto">
+            <button
+              onClick={() => toggleSection('sizes')}
+              className={`flex items-center transition-transform duration-300 ${
+                activeSection === 'sizes'
+                  ? 'scale-125 text-accent'
+                  : 'scale-100 text-gray-500'
+              }`}
+            >
+              <FaCog className="text-2xl App-logo" title="Impostazioni" />
+            </button>
+          </div>
         )}
       </div>
 
@@ -205,12 +253,14 @@ const MenuCard = ({ item, showImage = true }) => {
           </p>
           <table className="w-full text-sm text-gray-700 border-collapse border-spacing-y-2">
             <tbody>
-              {item.nutritionalValues.map((nv, index) => (
-                <tr key={index} className="border-b border-gray-300">
-                  <td className="pr-4 font-medium">{nv.name}</td>
-                  <td className="text-right">{nv.value}</td>
-                </tr>
-              ))}
+              {item.nutritionalValues
+                .filter((nv) => Number(nv.value) !== 0)
+                .map((nv, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="pr-4 font-medium">{nv.name}</td>
+                    <td className="text-right">{nv.value}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
@@ -221,6 +271,72 @@ const MenuCard = ({ item, showImage = true }) => {
           <p className="text-sm text-gray-700">
             <strong>Additivi:</strong> {item.additives}
           </p>
+        </div>
+      )}
+
+      {activeSection === 'sizes' && item.sizes && (
+        <div className="mt-4">
+          <p className="text-sm text-gray-700 mb-2">
+            <strong>Scegli la misura desiderata:</strong>
+          </p>
+          <div className="flex flex-col gap-2">
+            {item.sizes.map((sizeOption, idx) => (
+              <div key={idx} className="flex items-center">
+                {/* Modified button code remains unchanged */}
+                <button
+                  onClick={() => {
+                    if (selectedSize && selectedSize.name === sizeOption.name) {
+                      setSelectedSize(null)
+                    } else {
+                      setSelectedSize(sizeOption)
+                    }
+                  }}
+                  className={`relative inline-flex items-center h-6 w-11 rounded-full transition-colors duration-200 focus:outline-none ${
+                    selectedSize && selectedSize.name === sizeOption.name
+                      ? 'bg-green-500'
+                      : 'bg-gray-300'
+                  }`}
+                >
+                  <span
+                    className={`transform transition-transform duration-200 inline-block w-5 h-5 bg-white rounded-full ${
+                      selectedSize && selectedSize.name === sizeOption.name
+                        ? 'translate-x-5'
+                        : 'translate-x-1'
+                    }`}
+                  ></span>
+                </button>
+                <span className="ml-2 text-sm">{sizeOption.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {activeSection === 'extras' && extrasArray.length > 0 && (
+        <div className="mt-4">
+          <p className="text-sm text-gray-700 mb-2">
+            <strong>Extras:</strong>
+          </p>
+          <div className="flex flex-col gap-2">
+            {extrasArray.map((extra, idx) => (
+              <div key={idx} className="flex items-center">
+                {/* Show only the extra label */}
+                <span className="mr-2 text-sm">{extra.label}</span>
+                <button
+                  onClick={() => {}}
+                  className={`relative inline-flex items-center h-6 w-11 rounded-full transition-colors duration-200 focus:outline-none ${
+                    extra.default ? 'bg-blue-600' : 'bg-gray-300'
+                  }`}
+                >
+                  <span
+                    className={`transform transition-transform duration-200 inline-block w-5 h-5 bg-white rounded-full ${
+                      extra.default ? 'translate-x-5' : 'translate-x-1'
+                    }`}
+                  ></span>
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
