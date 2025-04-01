@@ -12,7 +12,7 @@ A modern restaurant website integrated with the **GloriaFood API** to dynamicall
 ## 🛠️ Tech Stack
 - **Frontend**: React + Tailwind CSS
 - **Backend**: Node.js + Express
-- **Containerization**: Docker, Docker Compose
+- **Containerization**: Docker
 - **CI/CD**: GitHub Actions + Docker Hub + Render
 
 ## 📦 Installation Options

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   FaUtensils,
   FaAllergies,
@@ -7,7 +7,6 @@ import {
   FaFire,
   FaLeaf,
   FaSeedling,
-  FaCog,
 } from 'react-icons/fa'
 import moment from 'moment'
 
@@ -46,6 +45,31 @@ const MenuCard = ({ item, showImage = true }) => {
     raw: <FaUtensils className="inline mr-1" />,
     nut_free: <FaLeaf className="inline mr-1" />,
     default: <FaUtensils className="inline mr-1" />,
+  }
+
+  // Nuovo componente per l'animazione: 3 linee orizzontali, lunghe 25px, colore grigio
+  const AnimatedTrafficLight = ({ title, className = '' }) => {
+    const [active, setActive] = useState(0)
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setActive((prev) => (prev + 1) % 3)
+      }, 400) // Animazione più veloce
+      return () => clearInterval(interval)
+    }, [])
+    return (
+      <div
+        title={title}
+        className={`flex flex-col justify-center items-center ${className} space-y-1`}
+      >
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            className="w-[25px] h-1 bg-gray-500 transition-opacity duration-200"
+            style={{ opacity: active === index ? 1 : 0.3 }}
+          ></div>
+        ))}
+      </div>
+    )
   }
 
   // Determina se l'articolo è "esaurito" in base alla data
@@ -124,6 +148,13 @@ const MenuCard = ({ item, showImage = true }) => {
         {selectedSize && (
           <span className="text-sm text-gray-500 ml-2">
             {selectedSize.name}
+            {selectedSize.price !== 0 && (
+              <>
+                {' '}
+                ({selectedSize.price > 0 ? '+' : '-'} €{' '}
+                {Math.abs(selectedSize.price)},00)
+              </>
+            )}
           </span>
         )}
       </p>
@@ -223,7 +254,7 @@ const MenuCard = ({ item, showImage = true }) => {
                   : 'scale-100 text-gray-500'
               }`}
             >
-              <FaCog className="text-2xl App-logo" title="Impostazioni" />
+              <AnimatedTrafficLight title="Impostazioni" className="text-2xl" />
             </button>
           </div>
         )}

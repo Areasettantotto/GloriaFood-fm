@@ -19,16 +19,16 @@ if (!API_KEY || !API_URL) {
   process.exit(1);
 }
 
-// Funzione per mappare allergeni
+// Allergens MAPPING
 const mapAllergens = (allergens) => {
   return (
     allergens?.map((allergen) => allergen.name || `ID ${allergen.id}`) || []
   );
 };
 
-// Funzione per mappare valori nutrizionali
+// Nutritionals Vvalues MAPPING
 const mapNutritionalValues = (nutritionalValues, size) => {
-  const sizeLabel = size === 'per_100g' ? 'per 100gg' : 'per porzione';
+  const sizeLabel = size === 'per_100g' ? 'per 100grammi' : 'per porzione';
   const mappedValues = nutritionalValues.map((nutritional) => ({
     name: nutritionalMapping[nutritional.id] || `Valore #${nutritional.id}`,
     value: nutritional.value || 'N/A',
@@ -36,7 +36,7 @@ const mapNutritionalValues = (nutritionalValues, size) => {
   return { mappedValues, sizeLabel };
 };
 
-// Endpoint per il menu
+// Menù Endpoint
 app.get('/api/menu', async (req, res) => {
   try {
     const response = await axios.get(API_URL, {
@@ -49,13 +49,13 @@ app.get('/api/menu', async (req, res) => {
 
     const menu = response.data;
 
-    // Elaborazione delle categorie e degli elementi del menu
+    // Processing categories and menu items
     menu.categories = menu.categories.filter(
       (category) => category.active && (!category.hidden_until || moment().isAfter(category.hidden_until))
     );
 
     menu.categories.forEach((category) => {
-      // Filtra gli elementi attivi e non nascosti
+      // Filter active and non-hidden items
       category.items = category.items.filter(
         (item) =>
           item.active &&
@@ -63,16 +63,16 @@ app.get('/api/menu', async (req, res) => {
       );
 
       category.items.forEach((item) => {
-        // Aggiungi percorso immagine per ogni elemento
+        // Add image path for each item (to improve management)
         item.image = `/images/menu/${item.id}.jpg`;
 
-        // Mappa i tag
+        // Tags MAPPING
         item.tags = item.tags || [];
 
-        // Mappa allergeni
+        // Allergens MAPPING
         item.allergens = mapAllergens(item.extras?.menu_item_allergens_values);
 
-        // Mappa valori nutrizionali
+        // Nutritional Values MAPPING
         if (item.extras?.menu_item_nutritional_values?.length > 0) {
           const { mappedValues, sizeLabel } = mapNutritionalValues(
             item.extras.menu_item_nutritional_values,
@@ -82,17 +82,17 @@ app.get('/api/menu', async (req, res) => {
           item.nutritionalSizeLabel = sizeLabel;
         }
 
-        // Preseleziona solo una variazione contrassegnata come predefinita e il cui prezzo è uguale al prezzo base
+        // Preselect only one variation marked as default and whose price is equal to the base price
         item.selectedSize = item.variations?.find(
           (variation) => variation.default && variation.price === item.price
         );
 
-        // Imposta displayPrice uguale al prezzo base dell'elemento
+        // Set displayPrice equal to the base price of the item
         item.displayPrice = item.price;
       });
     });
 
-    // Risposta con il menu elaborato
+    // Reply with the elaborate menu
     res.status(200).json(menu);
   } catch (error) {
     console.error(`Errore durante il recupero del menu: ${error.response?.data || error.message}`);
@@ -100,6 +100,6 @@ app.get('/api/menu', async (req, res) => {
   }
 });
 
-// Porta del server
+// Server port
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server in ascolto su porta ${PORT}`));
