@@ -28,7 +28,7 @@ const mapAllergens = (allergens) => {
 
 // Nutritionals Vvalues MAPPING
 const mapNutritionalValues = (nutritionalValues, size) => {
-  const sizeLabel = size === 'per_100g' ? 'per 100grammi' : 'per porzione';
+  const sizeLabel = size === 'per_100g' ? 'per 100g' : 'per porzione';
   const mappedValues = nutritionalValues.map((nutritional) => ({
     name: nutritionalMapping[nutritional.id] || `Valore #${nutritional.id}`,
     value: nutritional.value || 'N/A',

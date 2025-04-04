@@ -9,6 +9,7 @@ import {
   FaSeedling,
 } from 'react-icons/fa'
 import moment from 'moment'
+import nutritionalMapping from '../config/nutritionalMapping' // nuova importazione
 
 const MenuCard = ({ item, showImage = true }) => {
   const [imageError, setImageError] = useState(false)
@@ -47,8 +48,12 @@ const MenuCard = ({ item, showImage = true }) => {
     default: <FaUtensils className="inline mr-1" />,
   }
 
-  // Nuovo componente per l'animazione: 3 linee orizzontali, lunghe 25px, colore grigio
-  const AnimatedTrafficLight = ({ title, className = '' }) => {
+  // Nuovo componente per l'animazione: 3 linee orizzontali, lunghe 25px, colore grigio (con linea attiva in bg-primary se selezionato)
+  const AnimatedTrafficLight = ({
+    title,
+    className = '',
+    selected = false,
+  }) => {
     const [active, setActive] = useState(0)
     useEffect(() => {
       const interval = setInterval(() => {
@@ -64,7 +69,9 @@ const MenuCard = ({ item, showImage = true }) => {
         {[0, 1, 2].map((index) => (
           <div
             key={index}
-            className="w-[25px] h-1 bg-gray-500 transition-opacity duration-200"
+            className={`w-[25px] h-1 transition-opacity duration-200 ${
+              selected && active === index ? 'bg-accent' : 'bg-gray-500'
+            }`}
             style={{ opacity: active === index ? 1 : 0.3 }}
           ></div>
         ))}
@@ -96,6 +103,36 @@ const MenuCard = ({ item, showImage = true }) => {
   const displayPrice = selectedSize
     ? item.price + selectedSize.price
     : item.price
+
+  // Aggiunta della funzione per calcolare i valori nutrizionali in base alla misura selezionata
+  const computeNutrition = () => {
+    if (
+      selectedSize &&
+      selectedSize.extras &&
+      selectedSize.extras.menu_item_nutritional_values &&
+      selectedSize.extras.menu_item_nutritional_values.length > 0
+    ) {
+      // Mappa i valori della misura selezionata usando il mapping dei nomi
+      const mappedValues = selectedSize.extras.menu_item_nutritional_values.map(
+        (nv) => ({
+          name: nutritionalMapping[nv.id] || `Valore #${nv.id}`,
+          value: nv.value || 'N/A',
+        }),
+      )
+      const sizeLabel = selectedSize.name.includes('2 persone')
+        ? 'Per 2 persone'
+        : selectedSize.extras.menu_item_nutritional_values_size ||
+          item.nutritionalSizeLabel
+      return { mappedValues, sizeLabel }
+    }
+    // Fall-back: usa i dati mappati dall’endpoint (già processati nel backend)
+    return {
+      mappedValues: item.nutritionalValues,
+      sizeLabel: item.nutritionalSizeLabel,
+    }
+  }
+
+  const currentNutrition = computeNutrition()
 
   return (
     <div
@@ -254,7 +291,11 @@ const MenuCard = ({ item, showImage = true }) => {
                   : 'scale-100 text-gray-500'
               }`}
             >
-              <AnimatedTrafficLight title="Impostazioni" className="text-2xl" />
+              <AnimatedTrafficLight
+                title="Impostazioni"
+                className="text-2xl"
+                selected={activeSection === 'sizes'}
+              />
             </button>
           </div>
         )}
@@ -277,25 +318,26 @@ const MenuCard = ({ item, showImage = true }) => {
         </div>
       )}
 
-      {activeSection === 'nutritionalValues' && item.nutritionalValues && (
-        <div className="mt-4">
-          <p className="text-sm text-gray-500 mb-2">
-            Valori nutrizionali in grammi ({item.nutritionalSizeLabel}):
-          </p>
-          <table className="w-full text-sm text-gray-700 border-collapse border-spacing-y-2">
-            <tbody>
-              {item.nutritionalValues
-                .filter((nv) => Number(nv.value) !== 0)
-                .map((nv, index) => (
-                  <tr key={index} className="border-b border-gray-300">
-                    <td className="pr-4 font-medium">{nv.name}</td>
-                    <td className="text-right">{nv.value}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+      {activeSection === 'nutritionalValues' &&
+        currentNutrition.mappedValues && (
+          <div className="mt-4">
+            <p className="text-sm text-gray-500 mb-2">
+              Valori nutrizionali in grammi ({currentNutrition.sizeLabel}):
+            </p>
+            <table className="w-full text-sm text-gray-700 border-collapse border-spacing-y-2">
+              <tbody>
+                {currentNutrition.mappedValues
+                  .filter((nv) => Number(nv.value) !== 0)
+                  .map((nv, index) => (
+                    <tr key={index} className="border-b border-gray-300">
+                      <td className="pr-4 font-medium">{nv.name}</td>
+                      <td className="text-right">{nv.value}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        )}
 
       {activeSection === 'additives' && item.additives && (
         <div className="mt-4">
