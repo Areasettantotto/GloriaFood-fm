@@ -220,7 +220,7 @@ const MenuCard = ({ item, showImage = true }) => {
       {/* Icone per mostrare dettagli */}
       <div className="flex items-center mt-4">
         <div className="flex items-center space-x-4">
-          {item.ingredients && (
+          {(item.ingredients || item.description) && (
             <button
               onClick={() => toggleSection('ingredients')}
               className={`flex items-center transition-transform duration-300 ${
@@ -306,6 +306,14 @@ const MenuCard = ({ item, showImage = true }) => {
         <div className="mt-4">
           <p className="text-sm text-gray-700">
             <strong>Ingredienti:</strong> {item.ingredients}
+          </p>
+        </div>
+      )}
+      {activeSection === 'ingredients' && item.description && (
+        <div className="mt-4">
+          <hr className="border-gray-300 my-2" />
+          <p className="text-sm text-gray-700">
+            <strong>Descrizione:</strong> {item.description}
           </p>
         </div>
       )}
