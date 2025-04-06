@@ -112,20 +112,21 @@ const MenuCard = ({ item, showImage = true }) => {
       selectedSize.extras.menu_item_nutritional_values &&
       selectedSize.extras.menu_item_nutritional_values.length > 0
     ) {
-      // Mappa i valori della misura selezionata usando il mapping dei nomi
       const mappedValues = selectedSize.extras.menu_item_nutritional_values.map(
         (nv) => ({
           name: nutritionalMapping[nv.id] || `Valore #${nv.id}`,
           value: nv.value || 'N/A',
         }),
       )
-      const sizeLabel = selectedSize.name.includes('2 persone')
-        ? 'Per 2 persone'
-        : selectedSize.extras.menu_item_nutritional_values_size ||
-          item.nutritionalSizeLabel
+      // Ora sizeLabel usa semplicemente il nome della misura selezionata,
+      // supportando valori come "Porzione Big", "Per 2 persone", ecc.
+      const sizeLabel =
+        selectedSize.name ||
+        selectedSize.extras.menu_item_nutritional_values_size ||
+        item.nutritionalSizeLabel
       return { mappedValues, sizeLabel }
     }
-    // Fall-back: usa i dati mappati dall’endpoint (già processati nel backend)
+    // Fall-back: usa i dati già processati nel backend
     return {
       mappedValues: item.nutritionalValues,
       sizeLabel: item.nutritionalSizeLabel,
