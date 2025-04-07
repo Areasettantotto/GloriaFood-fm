@@ -25,6 +25,7 @@ const PrivacyPolicy = () => {
       >
         <Banner
           mediaType="video"
+          mediaSrc="videos/ProvacyPolicy.mp4"
           bannerHeight="30%"
           title="Privacy Policy"
           showLogo={false}
@@ -125,12 +126,12 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-semibold mb-4">Contattaci</h2>
               <p>
                 Se hai domande o dubbi riguardo alla nostra politica sulla
-                privacy, non esitare a contattarci via email a{' '}
+                privacy, non esitare a contattarci via email a:{' '}
                 <a
-                  href={`mailto:${siteConfig.contact_email}`}
+                  href={`mailto:${siteConfig.email}`}
                   className="text-blue-600"
                 >
-                  {siteConfig.contact_email}
+                  {siteConfig.email}
                 </a>
                 .
               </p>
