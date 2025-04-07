@@ -66,15 +66,64 @@ function Contatti() {
         </Helmet>
       </HelmetProvider>
 
-      {/* Sezione Banner */}
-      <Banner
-        mediaType="video" // Può essere 'image' o video
-        bannerHeight="30%"
-        title={siteConfig.contact_banner_title}
-        showLogo={false} // Escludi il logo
-      />
+      {/* Banner con overlay per i pulsanti centrati */}
+      <div className="relative w-full">
+        <Banner mediaType="video" bannerHeight="100%" showLogo={false} />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-5xl font-bold text-white mb-8">Contatti</h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Pulsante 1 */}
+            <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
+                <FaPhone className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+                <p className="mt-2 text-sm">
+                  {siteConfig.contact_content_button_call}
+                </p>
+              </div>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="w-full py-6 px-4 bg-secondary text-white hover:bg-accent transition-all duration-300"
+              >
+                {siteConfig.contact_lable_button_call}
+              </a>
+            </div>
+            {/* Pulsante 2 */}
+            <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
+                <FaEnvelope className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+                <p className="mt-2 text-sm">
+                  {siteConfig.contact_content_button_email}
+                </p>
+              </div>
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="w-full py-6 px-4 bg-secondary text-white hover:bg-accent transition-all duration-300"
+              >
+                {siteConfig.contact_lable_button_email}
+              </a>
+            </div>
+            {/* Pulsante 3 */}
+            <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
+                <FaWhatsapp className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
+                <p className="mt-2 text-sm">
+                  {siteConfig.contact_content_button_whatsapp}
+                </p>
+              </div>
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp}`}
+                className="w-full py-6 px-4 bg-secondary text-white hover:bg-accent transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteConfig.contact_lable_button_whatsapp}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Contenuto della pagina */}
+      {/* Contenuto della pagina (pulsanti rimossi) */}
       <ContactSection />
     </motion.div>
   )
@@ -92,54 +141,6 @@ const ContactSection = () => {
         {siteConfig.home_helmet_title}
       </h1>
       <p className="text-center mt-4">{siteConfig.payoff}</p>
-      {/* Aggiungi una riga con tre colonne per i pulsanti */}
-      <div className="mt-6 text-center grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="flex flex-col items-center w-full">
-          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-            <FaPhone className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-            <p className="mt-2 text-sm">
-              {siteConfig.contact_content_button_call}
-            </p>
-          </div>
-          <a
-            href={`tel:${siteConfig.phone}`}
-            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-          >
-            {siteConfig.contact_lable_button_call}
-          </a>
-        </div>
-        <div className="flex flex-col items-center w-full">
-          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-            <FaEnvelope className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-            <p className="mt-2 text-sm">
-              {siteConfig.contact_content_button_email}
-            </p>
-          </div>
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-          >
-            {siteConfig.contact_lable_button_email}
-          </a>
-        </div>
-        <div className="flex flex-col items-center w-full">
-          <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 rounded w-full">
-            <FaWhatsapp className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
-            <p className="mt-2 text-sm">
-              {siteConfig.contact_content_button_whatsapp}
-            </p>
-          </div>
-          <a
-            href={`https://wa.me/${siteConfig.whatsapp}`}
-            className="w-full py-6 px-4 bg-secondary text-white rounded-b hover:bg-accent transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {siteConfig.contact_lable_button_whatsapp}
-          </a>
-        </div>
-      </div>
-      {/* Aggiungi una riga di testo sotto i pulsanti */}
       <h2 className="text-2xl font-bold text-center mt-12">
         {siteConfig.contact_opening_hours_title}
       </h2>
