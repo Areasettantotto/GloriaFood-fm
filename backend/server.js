@@ -32,7 +32,7 @@ const mapNutritionalValues = (nutritionalValues, size) => {
   if (size && typeof size === 'object' && size.name) {
     sizeLabel = size.name;
   } else if (typeof size === 'string') {
-    sizeLabel = size === 'per_100g' ? 'per 100g' : 'per porzione';
+    sizeLabel = size === 'per_100g' ? 'per 100gjgfhfhdh' : 'per porzione';
   } else {
     sizeLabel = '';
   }
