@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import siteConfig from '../config/siteConfig.json' // Info ristorante
+import siteConfig from '../config/siteConfig.json'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import Banner from '../components/Banner' // Banner importato
-import GlobalLoader from '../components/GlobalLoader' // Importa il loader globale
+import Banner from '../components/Banner'
+import GlobalLoader from '../components/GlobalLoader'
+import CookieConsent from '../components/CookieConsent' // 👈 Importa il componente
 
-// Transizioni della pagina
 const pageVariants = {
   initial: { opacity: 0, x: -100 },
   animate: { opacity: 1, x: 0 },
@@ -20,7 +20,6 @@ function Home() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simula il caricamento delle risorse principali
     const images = document.querySelectorAll('img')
     let loaded = 0
 
@@ -36,7 +35,7 @@ function Home() {
         handleImageLoad()
       } else {
         img.addEventListener('load', handleImageLoad)
-        img.addEventListener('error', handleImageLoad) // In caso di errore, continua
+        img.addEventListener('error', handleImageLoad)
       }
     })
 
@@ -51,45 +50,45 @@ function Home() {
   return isLoading ? (
     <GlobalLoader />
   ) : (
-    <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={pageTransition}
-    >
-      <HelmetProvider>
-        <Helmet>
-          <title>{siteConfig.home_helmet_title}</title>
-          <meta name="description" content={siteConfig.home_helmet_payoff} />
-        </Helmet>
-      </HelmetProvider>
+    <>
+      <motion.div
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={pageTransition}
+      >
+        <HelmetProvider>
+          <Helmet>
+            <title>{siteConfig.home_helmet_title}</title>
+            <meta name="description" content={siteConfig.home_helmet_payoff} />
+          </Helmet>
+        </HelmetProvider>
 
-      {/* Componente Banner */}
-      <Banner
-        mediaType="video" // image, video
-        bannerHeight="100%" // altezza del banner: 100%, 70%, 30%
-        title={siteConfig.home_banner_title}
-        description={siteConfig.home_banner_subtitle}
-      />
+        <Banner
+          mediaType="video"
+          bannerHeight="100%"
+          title={siteConfig.home_banner_title}
+          description={siteConfig.home_banner_subtitle}
+        />
 
-      {/* Sezione contenuto */}
-      <div className="bg-gray-100 py-12">
-        <div className="container mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-semibold">
-            {siteConfig.home_helmet_title}
-          </h2>
-          <p className="mt-4 text-lg">{siteConfig.home_content_subtitle}</p>
+        <div className="bg-gray-100 py-12">
+          <div className="container mx-auto max-w-4xl px-6 text-center">
+            <h2 className="text-3xl font-semibold">
+              {siteConfig.home_helmet_title}
+            </h2>
+            <p className="mt-4 text-lg">{siteConfig.home_content_subtitle}</p>
+          </div>
+
+          <Gallery />
         </div>
-
-        {/* Gallery */}
-        <Gallery />
-      </div>
-    </motion.div>
+      </motion.div>
+      <CookieConsent /> {/* 👈 Mostra il componente alla fine */}
+    </>
   )
 }
 
-// Componente Gallery (estratto per modularità)
+// Gallery come prima
 const Gallery = () => (
   <div className="container mx-auto max-w-4xl px-6 mt-8">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -97,16 +96,13 @@ const Gallery = () => (
         '/images/home-pizza.png',
         '/images/home-pizza.png',
         '/images/home-pizza.png',
-        /*'/images/home-pizza-background.png',
-        '/images/home-pizza-background.png',
-        '/images/home-pizza-background.png',*/
       ].map((src, index) => (
         <img
           key={index}
           src={src}
           alt={`Piatto ${index + 1}`}
           className={`w-full h-auto object-cover rounded-lg ${
-            index >= 3 ? 'shadow-md' : 'App-logo' // classe effetto round
+            index >= 3 ? 'shadow-md' : 'App-logo'
           }`}
         />
       ))}

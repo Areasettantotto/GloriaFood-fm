@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import Menu from './pages/Menu'
 //import Menu_basic from './pages/Menu_basic'
 import Contatti from './pages/Contatti'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import NotFound from './pages/NotFound'
 import Layout from './components/Layout' // Importa il Layout
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Menu" element={<Menu />} />
           {/*<Route path="/Menu_basic" element={<Menu_basic />} />*/}
           <Route path="/Contatti" element={<Contatti />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
