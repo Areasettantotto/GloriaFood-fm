@@ -26,24 +26,42 @@ const CookieConsent = () => {
   }
 
   useEffect(() => {
-    // Controlla se l'utente ha già dato il consenso
-    const savedConsent = localStorage.getItem('cookie_consent')
-    // Imposta la lingua in base alla lingua del browser
+    const stored = localStorage.getItem('cookie_consent')
     const browserLang = navigator.language.startsWith('en') ? 'en' : 'it'
     setLang(browserLang)
 
-    if (!savedConsent) {
-      setVisible(true) // Mostra il widget se non c'è consenso salvato
-    } else {
-      setReopen(true) // Mostra il bottone per riaprire il consenso
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored)
+        const now = new Date().getTime()
+
+        if (parsed.expiresAt && now < parsed.expiresAt) {
+          setReopen(true)
+          return
+        } else {
+          localStorage.removeItem('cookie_consent') // scaduto
+        }
+      } catch {
+        localStorage.removeItem('cookie_consent') // formato errato
+      }
     }
+
+    setVisible(true)
   }, [])
 
-  // Gestisce il consenso dell'utente
   const handleConsent = (accepted) => {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'declined')
-    setVisible(false) // Nasconde il widget dopo la risposta
-    setReopen(true) // Mostra il bottone per riaprire il consenso
+    const expirationDays = 1 // giorni di scadenza del consenso
+    const expiresAt =
+      new Date().getTime() + expirationDays * 24 * 60 * 60 * 1000
+
+    const consentData = {
+      value: accepted ? 'accepted' : 'declined',
+      expiresAt,
+    }
+
+    localStorage.setItem('cookie_consent', JSON.stringify(consentData))
+    setVisible(false)
+    setReopen(true)
   }
 
   // Rende visibile il widget di consenso

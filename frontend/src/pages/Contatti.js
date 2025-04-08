@@ -21,30 +21,44 @@ function Contatti() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Gestione caricamento dinamico delle risorse
-    const images = document.querySelectorAll('img')
+    // Gestione caricamento dinamico di immagini e video
+    const mediaElements = document.querySelectorAll('img, video')
     let loaded = 0
 
-    const handleImageLoad = () => {
+    const handleMediaLoad = () => {
       loaded += 1
-      if (loaded === images.length) {
+      if (loaded === mediaElements.length) {
         setIsLoading(false)
       }
     }
 
-    images.forEach((img) => {
-      if (img.complete) {
-        handleImageLoad()
-      } else {
-        img.addEventListener('load', handleImageLoad)
-        img.addEventListener('error', handleImageLoad)
+    mediaElements.forEach((el) => {
+      if (el.tagName === 'IMG') {
+        if (el.complete) {
+          handleMediaLoad()
+        } else {
+          el.addEventListener('load', handleMediaLoad)
+          el.addEventListener('error', handleMediaLoad)
+        }
+      } else if (el.tagName === 'VIDEO') {
+        if (el.readyState >= 3) {
+          handleMediaLoad()
+        } else {
+          el.addEventListener('loadeddata', handleMediaLoad)
+          el.addEventListener('error', handleMediaLoad)
+        }
       }
     })
 
     return () => {
-      images.forEach((img) => {
-        img.removeEventListener('load', handleImageLoad)
-        img.removeEventListener('error', handleImageLoad)
+      mediaElements.forEach((el) => {
+        if (el.tagName === 'IMG') {
+          el.removeEventListener('load', handleMediaLoad)
+          el.removeEventListener('error', handleMediaLoad)
+        } else if (el.tagName === 'VIDEO') {
+          el.removeEventListener('loadeddata', handleMediaLoad)
+          el.removeEventListener('error', handleMediaLoad)
+        }
       })
     }
   }, [])
