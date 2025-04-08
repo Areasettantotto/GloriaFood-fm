@@ -21,45 +21,21 @@ function Contatti() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Gestione caricamento dinamico di immagini e video
-    const mediaElements = document.querySelectorAll('img, video')
-    let loaded = 0
-
-    const handleMediaLoad = () => {
-      loaded += 1
-      if (loaded === mediaElements.length) {
-        setIsLoading(false)
+    const bannerVideo = document.querySelector('video')
+    if (bannerVideo) {
+      const handleVideoLoad = () => setIsLoading(false)
+      if (bannerVideo.readyState >= 3) {
+        handleVideoLoad()
+      } else {
+        bannerVideo.addEventListener('loadeddata', handleVideoLoad)
+        bannerVideo.addEventListener('error', handleVideoLoad)
       }
-    }
-
-    mediaElements.forEach((el) => {
-      if (el.tagName === 'IMG') {
-        if (el.complete) {
-          handleMediaLoad()
-        } else {
-          el.addEventListener('load', handleMediaLoad)
-          el.addEventListener('error', handleMediaLoad)
-        }
-      } else if (el.tagName === 'VIDEO') {
-        if (el.readyState >= 3) {
-          handleMediaLoad()
-        } else {
-          el.addEventListener('loadeddata', handleMediaLoad)
-          el.addEventListener('error', handleMediaLoad)
-        }
+      return () => {
+        bannerVideo.removeEventListener('loadeddata', handleVideoLoad)
+        bannerVideo.removeEventListener('error', handleVideoLoad)
       }
-    })
-
-    return () => {
-      mediaElements.forEach((el) => {
-        if (el.tagName === 'IMG') {
-          el.removeEventListener('load', handleMediaLoad)
-          el.removeEventListener('error', handleMediaLoad)
-        } else if (el.tagName === 'VIDEO') {
-          el.removeEventListener('loadeddata', handleMediaLoad)
-          el.removeEventListener('error', handleMediaLoad)
-        }
-      })
+    } else {
+      setIsLoading(false)
     }
   }, [])
 
