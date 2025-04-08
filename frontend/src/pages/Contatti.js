@@ -21,7 +21,7 @@ function Contatti() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const bannerVideo = document.querySelector('video')
+    const bannerVideo = document.querySelector('#banner-video')
     if (bannerVideo) {
       const handleVideoLoad = () => setIsLoading(false)
       if (bannerVideo.readyState >= 3) {

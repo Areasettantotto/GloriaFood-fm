@@ -52,6 +52,7 @@ function Banner({
       {/* Media dinamico */}
       {mediaType === 'video' && (
         <video
+          id="banner-video" // <-- Aggiunto id
           autoPlay
           muted
           loop
