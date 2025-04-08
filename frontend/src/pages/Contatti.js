@@ -21,6 +21,8 @@ function Contatti() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    // This ensures the content (and thus the first button) is rendered
+    // ONLY after the background video (#banner-video) has fully loaded.
     const bannerVideo = document.querySelector('#banner-video')
     if (bannerVideo) {
       const handleVideoLoad = () => setIsLoading(false)
@@ -60,10 +62,18 @@ function Contatti() {
       <div className="relative w-full">
         <Banner mediaType="video" bannerHeight="100%" showLogo={false} />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-5xl font-bold text-white mb-8">Contatti</h1>
+          {/* Modifica per la vista mobile: titolo responsivo */}
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            Contatti
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Pulsante 1 */}
-            <div className="flex flex-col items-center w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col items-center w-full"
+            >
+              {/* Pulsante 1: Chiamaci */}
               <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
                 <FaPhone className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
                 <p className="mt-2 text-sm">
@@ -76,9 +86,14 @@ function Contatti() {
               >
                 {siteConfig.contact_lable_button_call}
               </a>
-            </div>
-            {/* Pulsante 2 */}
-            <div className="flex flex-col items-center w-full">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col items-center w-full"
+            >
+              {/* Pulsante 2: Invia una mail */}
               <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
                 <FaEnvelope className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
                 <p className="mt-2 text-sm">
@@ -91,9 +106,14 @@ function Contatti() {
               >
                 {siteConfig.contact_lable_button_email}
               </a>
-            </div>
-            {/* Pulsante 3 */}
-            <div className="flex flex-col items-center w-full">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="flex flex-col items-center w-full"
+            >
+              {/* Pulsante 3: Whatsapp */}
               <div className="flex flex-col items-center justify-center text-secondary bg-gray-200 py-6 px-4 w-full">
                 <FaWhatsapp className="mb-2 text-5xl hover:scale-125 transition-transform duration-300" />
                 <p className="mt-2 text-sm">
@@ -108,7 +128,7 @@ function Contatti() {
               >
                 {siteConfig.contact_lable_button_whatsapp}
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
