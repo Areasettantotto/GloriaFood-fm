@@ -101,6 +101,7 @@ const Gallery = () => (
           key={index}
           src={src}
           alt={`Piatto ${index + 1}`}
+          loading="lazy" // Abilita lazy loading
           className={`w-full h-auto object-cover rounded-lg ${
             index >= 3 ? 'shadow-md' : 'App-logo'
           }`}

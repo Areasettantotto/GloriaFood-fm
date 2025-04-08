@@ -72,6 +72,7 @@ function Banner({
         <img
           src={mediaSrc || '/images/home.png'}
           alt="Banner"
+          loading="lazy" // Abilita lazy loading per le immagini
           className="absolute top-0 left-0 w-full h-full object-cover"
           onLoad={handleMediaLoaded}
         />
