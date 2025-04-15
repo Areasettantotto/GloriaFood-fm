@@ -1,0 +1,75 @@
+{
+  "name": "Da Anna",
+  "address": "Viale Fiume 2 - 46100",
+  "city": "Mantova",
+  "phone": "+390376123456",
+  "email": "areasettantotto@icloud.com",
+  "whatsapp" : "+393488845855",
+  "button_pay": "https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=dc876bd2-b447-430b-b9d0-c056f8ffbda3",
+  "button_reservation": "https://www.foodbooking.com/ordering/restaurant/menu/reservation?restaurant_uid=dc876bd2-b447-430b-b9d0-c056f8ffbda3&reservation=true",
+  "view_menu_image": true,
+  "facebook_link": "https://www.facebook.com/",
+  "instagram_link": "https://www.instagram.com/",
+  "twitter_link": "https://www.twitter.com/",
+  "home_helmet_title": "Bar Ristorante Da Anna",
+  "home_helmet_payoff": "Ristorante Cinese con cucina tradizionale italiana",
+  "home_banner_title": "Ristorante Italiano e Cinese",
+  "home_banner_subtitle": "Sito di esempio a solo scopo dimostrativo",
+  "home_content_subtitle": "Situato a pochi passi dalla stazione di Mantova, il nostro ristorante di ultima generazione è il punto d’incontro perfetto tra due delle tradizioni culinarie più amate al mondo. Da noi troverete il meglio della cucina italiana e cinese, reinterpretata in chiave moderna per offrirvi un’esperienza unica. Ogni piatto è preparato con ingredienti freschi e selezionati, unendo il gusto autentico della tradizione all’innovazione della cucina contemporanea. Che siate amanti della pasta fatta in casa o del sapore avvolgente di un autentico dim sum, il nostro menù saprà sorprendervi. Vieni a trovarci e lasciati conquistare dall’armonia di due culture gastronomiche in un ambiente accogliente e raffinato.",
+  "menu_banner_title": "Il nostro menù",
+  "contact_banner_title": "Contatti",
+  "contact_open_all_days": "Aperto tutti i giorni dalle:",
+  "contact_content_button_call": "Siamo aperti dalle ore 06:00 alle ore 24:00",
+  "contact_lable_button_call": "Chiamaci",
+  "contact_content_button_email": "Rispondiamo entro 24 ore",
+  "contact_lable_button_email": "Invia una mail",
+  "contact_content_button_whatsapp": "Disponibile 24/7",
+  "contact_lable_button_whatsapp": "Contattaci su Whatsapp",
+  "contact_opening_hours_title": "Orari di apertura",
+  "contact_opening_hours": [
+    {
+      "day": "Lunedì",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Martedì",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Mercoledì",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Giovedì",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Venerdì",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Sabato",
+      "hours": "06:00 - 23:00"
+    },
+    {
+      "day": "Domenica",
+      "hours": "06:00 - 23:00"
+    }
+  ],
+  "cookie_consent_messages": {
+    "it": {
+      "message": "Questo sito utilizza cookie per migliorare l'esperienza utente.",
+      "accept": "Accetta",
+      "decline": "Rifiuta",
+      "reopen": "Privacy",
+      "privacyLink": "Leggi la nostra politica sulla privacy"
+    },
+    "en": {
+      "message": "This site uses cookies to enhance the user experience.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "reopen": "Privacy",
+      "privacyLink": "Read our privacy policy"
+    }
+  }
+}
