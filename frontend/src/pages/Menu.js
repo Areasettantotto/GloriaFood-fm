@@ -39,6 +39,13 @@ const Menu = () => {
 
   const [selectedCategory, setSelectedCategory] = useState(null)
 
+  // Preload backend on frontend load
+  useEffect(() => {
+    fetch(`${backendUrl}/api/menu`)
+      .then(() => console.log('Backend preloaded'))
+      .catch((err) => console.error('Error preloading backend:', err))
+  }, [])
+
   useEffect(() => {
     if (menu) {
       const firstVisibleCategory = menu.categories.find(

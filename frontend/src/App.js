@@ -12,7 +12,7 @@ import Contatti from './pages/Contatti'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import NotFound from './pages/NotFound'
 import Layout from './components/Layout'
-import ScrollToTop from './components/ScrollToTop' // <-- New import
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const location = useLocation() // Get current position for conditional animations
