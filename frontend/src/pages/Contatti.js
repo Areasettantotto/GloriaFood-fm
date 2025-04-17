@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Banner from '../components/Banner'
 import GlobalLoader from '../components/GlobalLoader'
 import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
+import OpeningHours from '../components/OpeningHours'
 import { pageVariants, pageTransition } from '../config/motionConfig'
 
 function Contatti() {
@@ -127,10 +128,6 @@ function Contatti() {
 
 // Separate component for the contact section
 const ContactSection = () => {
-  const allDaysSameHours = siteConfig.contact_opening_hours.every(
-    (day) => day.hours === siteConfig.contact_opening_hours[0].hours,
-  )
-
   return (
     <div className="container mx-auto p-4">
       <p className="text-center mt-4">{siteConfig.payoff}</p>
@@ -138,23 +135,7 @@ const ContactSection = () => {
         {siteConfig.contact_opening_hours_title}
       </h2>
       <div className="text-center mt-4">
-        {allDaysSameHours ? (
-          <p className="text-sm">
-            {siteConfig.contact_open_all_days}{' '}
-            {siteConfig.contact_opening_hours[0].hours}
-          </p>
-        ) : (
-          <table className="table-auto mx-auto">
-            <tbody>
-              {siteConfig.contact_opening_hours.map((day, index) => (
-                <tr key={index} className="text-sm">
-                  <td className="text-left pr-4">{day.day}</td>
-                  <td className="text-right">{day.hours}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+        <OpeningHours />
       </div>
     </div>
   )
