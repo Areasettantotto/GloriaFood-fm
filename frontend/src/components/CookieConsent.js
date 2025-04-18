@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { HoverLinkRouter } from '../App'
 import siteConfig from '../config/siteConfig.json'
 
 const CookieConsent = () => {
@@ -93,12 +93,9 @@ const CookieConsent = () => {
           >
             <div className="flex-1 text-sm text-gray-800">
               {t.message}{' '}
-              <Link
-                to="/Privacy-policy"
-                className="text-blue-600 hover:underline"
-              >
+              <HoverLinkRouter to="/Privacy-policy">
                 {t.privacyLink}
-              </Link>
+              </HoverLinkRouter>
             </div>
             <div className="flex gap-2">
               <button

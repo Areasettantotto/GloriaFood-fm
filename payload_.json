@@ -1,0 +1,2527 @@
+{
+  "languages": [
+    "it"
+  ],
+  "extras": null,
+  "sim_menu_id": null,
+  "sim_last_updated_at": null,
+  "sim_last_update_check_at": null,
+  "sim_menu_import_in_progress": false,
+  "track_new_menu_items": null,
+  "created_at": "2024-06-22T10:33:51.000Z",
+  "updated_at": "2024-07-09T20:23:09.000Z",
+  "id": 4710666,
+  "currency": "EUR",
+  "default_language": "it",
+  "name": "Menù 1",
+  "description": "Descrizione",
+  "createdAt": "2024-06-22T10:33:51.000Z",
+  "updatedAt": "2024-07-09T20:23:09.000Z",
+  "account_id": 1691800,
+  "categories": [
+    {
+      "extras": null,
+      "id": 3518003,
+      "menu_id": 4710666,
+      "name": "Antipasti",
+      "description": "Un inizio delizioso per il tuo viaggio culinario nella tradizione Mantovana",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 0,
+      "sort": 0,
+      "picture_id": null,
+      "hidden_until": null,
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4677,
+              1,
+              2,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "350"
+              },
+              {
+                "id": 10,
+                "value": "15"
+              },
+              {
+                "id": 11,
+                "value": "3"
+              },
+              {
+                "id": 12,
+                "value": "12"
+              },
+              {
+                "id": 13,
+                "value": "4"
+              },
+              {
+                "id": 14,
+                "value": "3"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4677,
+                "name": "Senape"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 19912175,
+          "menu_category_id": 3518003,
+          "name": "Tagliere del salumiere con salumi e formaggi tipici Mantovani",
+          "description": "Il Tagliere del Salumiere propone un’eccellenza di salumi e formaggi tipici mantovani, scelti con cura tra piccoli produttori locali.",
+          "price": 20,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 0,
+          "sort": 0,
+          "tags": [
+            "HOT",
+            "NUT_FREE"
+          ],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "porchetta, salame, mortadella, pancetta, formaggi \ntipici mantovani, mostarda fatta in casa, sottaceti.",
+          "additives": "E621E (dato non veritiero a solo scopo di esempio).",
+          "restaurant_menu_availabilities": [],
+          "sizes": [
+            {
+              "extras": {
+                "menu_item_nutritional_values": [
+                  {
+                    "id": 9,
+                    "value": "350"
+                  },
+                  {
+                    "id": 10,
+                    "value": "15"
+                  },
+                  {
+                    "id": 11,
+                    "value": "3"
+                  },
+                  {
+                    "id": 12,
+                    "value": "12"
+                  },
+                  {
+                    "id": 13,
+                    "value": "4"
+                  },
+                  {
+                    "id": 14,
+                    "value": "3"
+                  }
+                ],
+                "menu_item_nutritional_values_size": "per_100g"
+              },
+              "id": 9648948,
+              "menu_item_id": 19912175,
+              "name": "Porzione normale (1 persona)",
+              "price": 0,
+              "default": false,
+              "groups": []
+            },
+            {
+              "extras": {
+                "menu_item_nutritional_values": [
+                  {
+                    "id": 9,
+                    "value": "700"
+                  },
+                  {
+                    "id": 10,
+                    "value": "30"
+                  },
+                  {
+                    "id": 11,
+                    "value": "6"
+                  },
+                  {
+                    "id": 12,
+                    "value": "24"
+                  },
+                  {
+                    "id": 13,
+                    "value": "8"
+                  },
+                  {
+                    "id": 14,
+                    "value": "6"
+                  }
+                ],
+                "menu_item_nutritional_values_size": "per_100g"
+              },
+              "id": 9648949,
+              "menu_item_id": 19912175,
+              "name": "Porzione Max (2 porzioni separate)",
+              "price": 10,
+              "default": false,
+              "groups": []
+            }
+          ],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4677,
+              1,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "200"
+              },
+              {
+                "id": 10,
+                "value": "5"
+              },
+              {
+                "id": 11,
+                "value": "12"
+              },
+              {
+                "id": 12,
+                "value": "20"
+              },
+              {
+                "id": 13,
+                "value": "4"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4677,
+                "name": "Senape"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045259,
+          "menu_category_id": 3518003,
+          "name": "Bresaola della Valtellina con mostarda di pesche, pistacchi e caprino morbido",
+          "description": "Bresaola della Valtellina accompagnata da mostarda di pesche, granella di pistacchi e caprino morbido: un equilibrio raffinato tra dolce, sapido e cremoso, per un antipasto fresco e sorprendente.",
+          "price": 16,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 0,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "bresaola, mostarda di pesche, pistacchi, caprino \nmorbido.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              5,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "150"
+              },
+              {
+                "id": 10,
+                "value": "7"
+              },
+              {
+                "id": 11,
+                "value": "10"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "3"
+              },
+              {
+                "id": 14,
+                "value": "0,5"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 5,
+                "name": "Pesce"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045270,
+          "menu_category_id": 3518003,
+          "name": "Carpaccio di pesce spada con salsa di arance, pinoli tostati e stracciatella",
+          "description": "Carpaccio di Pesce Spada con salsa di arance, pinoli tostati e stracciatella: un piatto dal sapore delicato e agrumato, arricchito dalla croccantezza dei pinoli e dalla cremosità della stracciatella, per un equilibrio perfetto di freschezza e raffinatezza.",
+          "price": 18,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "pesce spada, salsa di arance, pinoli tostati, stracciatella.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "120"
+              },
+              {
+                "id": 10,
+                "value": "5"
+              },
+              {
+                "id": 11,
+                "value": "8"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "5"
+              },
+              {
+                "id": 14,
+                "value": "1,5"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": []
+          },
+          "id": 20045271,
+          "menu_category_id": 3518003,
+          "name": "Crudo di Parma con melone di Viadana",
+          "description": "Crudo di Parma con melone di Viadana: un classico intramontabile che unisce la dolcezza succosa del melone locale alla sapidità del prosciutto crudo, creando un'armonia di sapori freschi e raffinati, perfetto per un antipasto estivo.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 0,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "prosciutto crudo di Parma, melone di Viadana.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": [
+        {
+          "extras": null,
+          "id": 4021360,
+          "menu_id": 4710666,
+          "name": "Doppia Salsa",
+          "sort": 0,
+          "required": true,
+          "force_min": 1,
+          "force_max": 3,
+          "allow_quantity": true,
+          "tax_category_id": 393118,
+          "major_group_id": 76587,
+          "options": [
+            {
+              "extras": {
+                "sku": "",
+                "country_value": "",
+                "country_condition": ""
+              },
+              "id": 30146471,
+              "option_group_id": 4021360,
+              "name": "Doppia Salsa",
+              "price": 5,
+              "default": false,
+              "sort": 0,
+              "restaurant_menu_availabilities": [],
+              "is_out_of_stock": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extras": null,
+      "id": 3518036,
+      "menu_id": 4710666,
+      "name": "Primi",
+      "description": "Il cuore della cucina Mantovana",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 0,
+      "sort": 1,
+      "picture_id": null,
+      "hidden_until": null,
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              3,
+              6
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "208"
+              },
+              {
+                "id": 10,
+                "value": "29"
+              },
+              {
+                "id": 11,
+                "value": "8"
+              },
+              {
+                "id": 12,
+                "value": "6"
+              },
+              {
+                "id": 13,
+                "value": "6,3"
+              },
+              {
+                "id": 14,
+                "value": "1,26"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              },
+              {
+                "id": 6,
+                "name": "Frumento"
+              }
+            ]
+          },
+          "id": 19912438,
+          "menu_category_id": 3518036,
+          "name": "Speciale tortello di zucca al burro e salvia",
+          "description": "Speciale Tortello di Zucca al burro e salvia: un piatto che celebra la tradizione mantovana, con pasta fresca ripiena di morbida zucca dolce, condita con burro fuso e foglie di salvia croccanti. Un perfetto equilibrio di sapori autunnali, ricco e avvolgente.",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 0,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "pasta del tortello, ripieno di zucca, burro, salvia.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679,
+              1,
+              6212
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "217"
+              },
+              {
+                "id": 10,
+                "value": "20,98"
+              },
+              {
+                "id": 11,
+                "value": "7,53"
+              },
+              {
+                "id": 12,
+                "value": "6,01"
+              },
+              {
+                "id": 13,
+                "value": "1,2"
+              },
+              {
+                "id": 14,
+                "value": "0,9"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6212,
+                "name": "Sedano"
+              }
+            ]
+          },
+          "id": 19913200,
+          "menu_category_id": 3518036,
+          "name": "Risotto alla mantovana",
+          "description": "Risotto alla Mantovana: un piatto dal cuore della tradizione, con riso cremoso e saporito, arricchito dal delicato gusto del brodo di carne e un tocco di salsiccia mantovana. Un'esperienza autentica che celebra i sapori della nostra terra.",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "riso, salsiccia di maiale, brodo (spesso di carne), burro, formaggio grana, cipolla, vino bianco.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              6,
+              3,
+              1,
+              6212,
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "250"
+              },
+              {
+                "id": 10,
+                "value": "25"
+              },
+              {
+                "id": 11,
+                "value": "10"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "2"
+              },
+              {
+                "id": 14,
+                "value": "1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6212,
+                "name": "Sedano"
+              },
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 19913201,
+          "menu_category_id": 3518036,
+          "name": "Maccheroncini al Torchio con stracotto di manzo",
+          "description": "Maccheroncini al Torchio con stracotto di manzo: un incontro perfetto tra la pasta fresca e il sugo ricco e saporito dello stracotto, cotto lentamente per esaltarne la tenerezza. Un piatto che racconta la tradizione mantovana con gusto e intensità.",
+          "price": 12,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "maccheroncini, manzo, vino, verdure (carote, sedano, cipolla), burro o olio.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679,
+              1,
+              6212,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "250"
+              },
+              {
+                "id": 10,
+                "value": "20"
+              },
+              {
+                "id": 11,
+                "value": "12"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "1"
+              },
+              {
+                "id": 14,
+                "value": "1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6212,
+                "name": "Sedano"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 20045665,
+          "menu_category_id": 3518036,
+          "name": "Risotto con Puntel (Braciola di Maiale)",
+          "description": "Risotto con Puntel: un piatto rustico e ricco, dove il risotto cremoso si sposa perfettamente con la braciola di maiale, saporita e ben rosolata. Un'esplosione di gusto che unisce la delicatezza del riso alla succulenza della carne, in un abbraccio di tradizione.",
+          "price": 18,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "riso, costine di maiale (puntel), burro, brodo, cipolla, formaggio grana.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              6,
+              3,
+              1
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "127"
+              },
+              {
+                "id": 10,
+                "value": "14"
+              },
+              {
+                "id": 11,
+                "value": "7"
+              },
+              {
+                "id": 12,
+                "value": "7"
+              },
+              {
+                "id": 13,
+                "value": "2"
+              },
+              {
+                "id": 14,
+                "value": "0,07"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              }
+            ]
+          },
+          "id": 20045669,
+          "menu_category_id": 3518036,
+          "name": "Lasagne della nonna",
+          "description": "Lasagne della Nonna: un classico intramontabile, con strati di pasta fresca, ragù ricco e besciamella cremosa, cucinate con amore come una volta. Un piatto che riscalda il cuore, con sapori avvolgenti e autentici, perfetto per un pranzo in famiglia.",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 4,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "pasta per lasagna, ragù di carne, besciamella, formaggio (solitamente Parmigiano o Grana), burro.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              6,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "150"
+              },
+              {
+                "id": 10,
+                "value": "25"
+              },
+              {
+                "id": 11,
+                "value": "5"
+              },
+              {
+                "id": 12,
+                "value": "4"
+              },
+              {
+                "id": 13,
+                "value": "2"
+              },
+              {
+                "id": 14,
+                "value": "0,5"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045679,
+          "menu_category_id": 3518036,
+          "name": "Pasta Mediterranea con olive taggiasche",
+          "description": "Pasta Mediterranea con olive taggiasche: un piatto fresco e saporito che unisce il gusto intenso delle olive taggiasche, il pomodoro succoso e un tocco di basilico, creando un perfetto equilibrio di sapori tipici del Mediterraneo. Un viaggio di gusto in ogni boccone.",
+          "price": 12,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 5,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "pasta, pesto di pomodori secchi, capperi, olive taggiasche, mozzarella di bufala, pinoli.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              6,
+              7,
+              3,
+              6211
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "280"
+              },
+              {
+                "id": 10,
+                "value": "51,4"
+              },
+              {
+                "id": 11,
+                "value": "3"
+              },
+              {
+                "id": 12,
+                "value": "10,2"
+              },
+              {
+                "id": 13,
+                "value": "2"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 7,
+                "name": "Crostacei"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              },
+              {
+                "id": 6211,
+                "name": "Molluschi"
+              }
+            ]
+          },
+          "id": 20045684,
+          "menu_category_id": 3518036,
+          "name": "Tagliatelle al nero di seppia con gamberoni",
+          "description": "Tagliatelle al Nero di Seppia con gamberoni: un piatto raffinato e saporito, dove la pasta fresca al nero di seppia si fonde con la dolcezza dei gamberoni, creando un'armonia di mare intensa e avvolgente, perfetta per un'esperienza gourmet.",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 6,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "tagliatelle al nero di seppia, code di gamberi, pomodorini pachino, peperoncino fresco, olio d’oliva, aglio.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": []
+    },
+    {
+      "extras": null,
+      "id": 3518171,
+      "menu_id": 4710666,
+      "name": "Secondi",
+      "description": "Sapori intensi e raffinati della cucina Mantovana",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 0,
+      "sort": 2,
+      "picture_id": null,
+      "hidden_until": "2025-03-11T18:59:00.000Z",
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4677,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "150"
+              },
+              {
+                "id": 10,
+                "value": "5"
+              },
+              {
+                "id": 11,
+                "value": "10"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "3"
+              },
+              {
+                "id": 14,
+                "value": "0,5"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4677,
+                "name": "Senape"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 19913263,
+          "menu_category_id": 3518171,
+          "name": "Tartare di fassona con cipolla caramellata, senape, uova e insalata fresca",
+          "description": "Tartare di Fassona con cipolla caramellata, senape, uova e insalata fresca: un piatto ricco e bilanciato, dove la carne pregiata di Fassona si unisce alla dolcezza della cipolla caramellata, al tocco pungente della senape e alla freschezza dell’insalata, per un'esperienza unica e gourmet.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 0,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "carne di fassona, cipolla caramellata, senape, uovo, insalatina fresca.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679,
+              1,
+              6212
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "121"
+              },
+              {
+                "id": 10,
+                "value": "5,7"
+              },
+              {
+                "id": 11,
+                "value": "3,6"
+              },
+              {
+                "id": 12,
+                "value": "10"
+              },
+              {
+                "id": 13,
+                "value": "0,4"
+              },
+              {
+                "id": 14,
+                "value": "0,4"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6212,
+                "name": "Sedano"
+              }
+            ]
+          },
+          "id": 19913261,
+          "menu_category_id": 3518171,
+          "name": "Lo stracotto con polenta",
+          "description": "Stracotto con Polenta: un piatto che racchiude la tradizione, con carne di manzo cotta lentamente fino a diventare tenera e saporita, accompagnata da morbida polenta, per un abbinamento che esalta i sapori rustici e avvolgenti della cucina mantovana.",
+          "price": 14,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "manzo (per lo stracotto), vino, verdure (carote, sedano, cipolla), polenta (farina di mais), burro o olio.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "207"
+              },
+              {
+                "id": 10,
+                "value": "13"
+              },
+              {
+                "id": 11,
+                "value": "18,8"
+              },
+              {
+                "id": 12,
+                "value": "4,8"
+              },
+              {
+                "id": 13,
+                "value": "8,5"
+              },
+              {
+                "id": 14,
+                "value": "0,39"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 20045739,
+          "menu_category_id": 3518171,
+          "name": "Rotolo di frittata con ripieno di salsa di mirtilli e patate",
+          "description": "Rotolo di Frittata con ripieno di salsa di mirtilli e patate: una combinazione intrigante di sapori, dove la frittata morbida avvolge un ripieno ricco di patate e la dolcezza dei mirtilli, creando un piatto originale e gustoso, che sorprende al primo assaggio.",
+          "price": 14,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "uova, mirtilli, patate",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679,
+              1
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "154"
+              },
+              {
+                "id": 10,
+                "value": "5,7"
+              },
+              {
+                "id": 11,
+                "value": "9,15"
+              },
+              {
+                "id": 12,
+                "value": "33,57"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0,84"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              }
+            ]
+          },
+          "id": 20045751,
+          "menu_category_id": 3518171,
+          "name": "Arrosto di vitello in sugo con patate saltate in padella",
+          "description": "Arrosto di Vitello in Sugo con patate saltate in padella: un piatto che unisce la tenerezza del vitello cucinato in un ricco sugo, accompagnato da patate dorate e croccanti, per un connubio perfetto di sapori e consistenze, ideale per un pranzo conviviale e gustoso.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "vitello, sugo (che può includere vino, brodo, spezie), patate, olio, burro.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              6,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "250"
+              },
+              {
+                "id": 10,
+                "value": "10"
+              },
+              {
+                "id": 11,
+                "value": "25"
+              },
+              {
+                "id": 12,
+                "value": "10"
+              },
+              {
+                "id": 13,
+                "value": "5"
+              },
+              {
+                "id": 14,
+                "value": "0,5"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 19913265,
+          "menu_category_id": 3518171,
+          "name": "Tomino alla griglia con radicchio trevigiano miele e noci",
+          "description": "Tomino alla Griglia con radicchio trevigiano, miele e noci: un piatto dal sapore deciso, dove il formaggio Tomino grigliato si sposa con l'amaro del radicchio, la dolcezza del miele e la croccantezza delle noci, creando un equilibrio perfetto di sapori intensi e armoniosi.",
+          "price": 12,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 4,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "tomino, radicchio trevigiano, miele, noci.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "276,47"
+              },
+              {
+                "id": 10,
+                "value": "0,88"
+              },
+              {
+                "id": 11,
+                "value": "0,10"
+              },
+              {
+                "id": 12,
+                "value": "25,55"
+              },
+              {
+                "id": 13,
+                "value": "16,70"
+              },
+              {
+                "id": 14,
+                "value": "0,6"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045758,
+          "menu_category_id": 3518171,
+          "name": "Petto di pollo ubriaco",
+          "description": "Petto di Pollo Ubriaco: un piatto saporito e audace, dove il petto di pollo viene cucinato in un delicato bagno di vino rosso, arricchito da aromi e spezie, per un risultato succulento e fragrante. Un piatto che sorprende con il suo equilibrio di sapori robusti e avvolgen",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 5,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "petto di pollo, marsala, fichi, zucchero (per caramellare i fichi), mandorle.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "166"
+              },
+              {
+                "id": 10,
+                "value": "0,4"
+              },
+              {
+                "id": 11,
+                "value": "20,3"
+              },
+              {
+                "id": 12,
+                "value": "9,3"
+              },
+              {
+                "id": 13,
+                "value": "54,4"
+              },
+              {
+                "id": 14,
+                "value": "0,1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 20045759,
+          "menu_category_id": 3518171,
+          "name": "Tagliata di cuberoll al sale rosa, rosmarino e crema d'aceto con patate arrosto",
+          "description": "Tagliata di Cuberoll al sale rosa, rosmarino e crema d'aceto, accompagnata da patate arrosto: un piatto succulento dove la carne tenera e saporita si arricchisce di profumi aromatici e un tocco di acidità della crema d'aceto, perfettamente bilanciata dalle patate croccanti.",
+          "price": 23,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 6,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "cuberoll, sale rosa, rosmarino, crema d’aceto, patate.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": []
+    },
+    {
+      "extras": null,
+      "id": 3519067,
+      "menu_id": 4710666,
+      "name": "Contorni",
+      "description": "Colori e freschezza a ogni portata",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 127,
+      "sort": 3,
+      "picture_id": null,
+      "hidden_until": null,
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "185"
+              },
+              {
+                "id": 10,
+                "value": "12"
+              },
+              {
+                "id": 11,
+                "value": "6"
+              },
+              {
+                "id": 12,
+                "value": "12"
+              },
+              {
+                "id": 13,
+                "value": "3"
+              },
+              {
+                "id": 14,
+                "value": "0,9"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              }
+            ]
+          },
+          "id": 19919443,
+          "menu_category_id": 3519067,
+          "name": "Insalata di ceci, pomodorini, olive taggiasche e bufala",
+          "description": "Insalata di Ceci con pomodorini, olive taggiasche e bufala: un piatto fresco e nutriente, dove i ceci si uniscono alla dolcezza dei pomodorini, il sapore intenso delle olive taggiasche e la cremosità della mozzarella di bufala, per un mix di sapori mediterranei e bilanciati.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 0,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "ceci, pomodorini secchi, olive taggiasche, bufala.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "180"
+              },
+              {
+                "id": 10,
+                "value": "2,5"
+              },
+              {
+                "id": 11,
+                "value": "8"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "1"
+              },
+              {
+                "id": 14,
+                "value": "0,7"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              }
+            ]
+          },
+          "id": 20045770,
+          "menu_category_id": 3519067,
+          "name": "Caprese di bufala campana con pomodori ramati al profumo di basilico",
+          "description": "Caprese di Bufala Campana con pomodori ramati al profumo di basilico: un piatto semplice ma elegante, che unisce la freschezza della mozzarella di bufala, la dolcezza dei pomodori ramati e l'aroma intenso del basilico, per un'esperienza autentica della cucina mediterranea.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "bufala campana, pomodori ramati, basilico.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              5,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "220"
+              },
+              {
+                "id": 10,
+                "value": "7"
+              },
+              {
+                "id": 11,
+                "value": "10"
+              },
+              {
+                "id": 12,
+                "value": "16"
+              },
+              {
+                "id": 13,
+                "value": "1,5"
+              },
+              {
+                "id": 14,
+                "value": "1,2"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 5,
+                "name": "Pesce"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045772,
+          "menu_category_id": 3519067,
+          "name": "Insalata di salmone affumicato con mela verde, pinoli, uvetta e scalogno",
+          "description": "Insalata di Salmone Affumicato con mela verde, pinoli, uvetta e scalogno: un piatto fresco e delicato, dove il salmone affumicato si abbina alla croccantezza della mela verde, alla dolcezza dell'uvetta, al gusto tostato dei pinoli e alla nota aromaticamente pungente dello scalogno.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "salmone affumicato, mela verde, pinoli, uvetta e scalogno.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "210"
+              },
+              {
+                "id": 10,
+                "value": "6"
+              },
+              {
+                "id": 11,
+                "value": "9"
+              },
+              {
+                "id": 12,
+                "value": "15"
+              },
+              {
+                "id": 13,
+                "value": "1"
+              },
+              {
+                "id": 14,
+                "value": "1,1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045777,
+          "menu_category_id": 3519067,
+          "name": "Insalata di rucola, grana, noci, prosciutto di Parma e melone di Viadana",
+          "description": "Insalata di Rucola con grana, noci, prosciutto di Parma e melone di Viadana: un piatto fresco e raffinato, dove la rucola piccante si sposa con la dolcezza del melone, il sapore delicato del prosciutto di Parma, il croccante delle noci e la cremosità del grana, creando un perfetto equilibrio di sapo",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "rucola, grana, noci, prosciutto di Parma e melone di Viadana.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": []
+    },
+    {
+      "extras": null,
+      "id": 3519069,
+      "menu_id": 4710666,
+      "name": "Dessert",
+      "description": "Un tocco di dolcezza per chiudere in bellezza",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 127,
+      "sort": 4,
+      "picture_id": null,
+      "hidden_until": null,
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              6,
+              1,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "330"
+              },
+              {
+                "id": 10,
+                "value": "28"
+              },
+              {
+                "id": 11,
+                "value": "6"
+              },
+              {
+                "id": 12,
+                "value": "12"
+              },
+              {
+                "id": 13,
+                "value": "0,5"
+              },
+              {
+                "id": 14,
+                "value": "0,1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 6,
+                "name": "Frumento"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 19919448,
+          "menu_category_id": 3519069,
+          "name": "Tiramisù con zabaione",
+          "description": "Tiramisù con Zabaione: un'interpretazione raffinata del classico, con il cremoso zabaione che arricchisce il mascarpone, mentre i savoiardi si immergono nel caffè per un sapore intenso e avvolgente. Un dessert goloso e vellutato che conquista con ogni cucchiaio.",
+          "price": 7,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 0,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "savoiardi, caffè, mascarpone, uova, zucchero, zabaione, cacao.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1,
+              3
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "140"
+              },
+              {
+                "id": 10,
+                "value": "24"
+              },
+              {
+                "id": 11,
+                "value": "22"
+              },
+              {
+                "id": 12,
+                "value": "4"
+              },
+              {
+                "id": 13,
+                "value": "3"
+              },
+              {
+                "id": 14,
+                "value": "0,1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 3,
+                "name": "Uova"
+              }
+            ]
+          },
+          "id": 20045801,
+          "menu_category_id": 3519069,
+          "name": "Budino al Crem Caramel",
+          "description": "Budino al Crème Caramel: un dolce classico e delicato, con una crema morbida e vellutata che si fonde con il ricco caramello, per un equilibrio perfetto tra dolcezza e leggerezza. Un dessert che conquista con la sua semplicità e raffinatezza.",
+          "price": 7,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "latte, zucchero, uova, caramello.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              3,
+              1,
+              2
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "300"
+              },
+              {
+                "id": 10,
+                "value": "25"
+              },
+              {
+                "id": 11,
+                "value": "5"
+              },
+              {
+                "id": 12,
+                "value": "20"
+              },
+              {
+                "id": 13,
+                "value": "1"
+              },
+              {
+                "id": 14,
+                "value": "0,1"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 3,
+                "name": "Uova"
+              },
+              {
+                "id": 1,
+                "name": "Latte"
+              },
+              {
+                "id": 2,
+                "name": "Frutta a guscio"
+              }
+            ]
+          },
+          "id": 20045802,
+          "menu_category_id": 3519069,
+          "name": "Semifreddo con granella di mandorle",
+          "description": "Semifreddo con Granella di Mandorle: un dolce fresco e leggero, con una crema soffice e vellutata arricchita dalla croccantezza della granella di mandorle, che aggiunge un tocco di sapore e consistenza. Un dessert ideale per concludere un pasto con dolcezza e freschezza.",
+          "price": 7,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "panna, zucchero, uova, granella di mandorle.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              1
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "240"
+              },
+              {
+                "id": 10,
+                "value": "20"
+              },
+              {
+                "id": 11,
+                "value": "3"
+              },
+              {
+                "id": 12,
+                "value": "17"
+              },
+              {
+                "id": 13,
+                "value": "1"
+              },
+              {
+                "id": 14,
+                "value": "0,05"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 1,
+                "name": "Latte"
+              }
+            ]
+          },
+          "id": 20045803,
+          "menu_category_id": 3519069,
+          "name": "Panna cotta con frutti di bosco e scaglie di cioccolato",
+          "description": "Panna Cotta con Frutti di Bosco e Scaglie di Cioccolato: un dessert cremoso e avvolgente, con la delicatezza della panna cotta che si sposa perfettamente con la freschezza dei frutti di bosco e la croccantezza delle scaglie di cioccolato, creando un'armonia di sapori irresistibile.",
+          "price": 7,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": false,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "panna, zucchero, gelatina, frutti di bosco, scaglie di cioccolato.",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": []
+    },
+    {
+      "extras": null,
+      "id": 3519078,
+      "menu_id": 4710666,
+      "name": "Vini",
+      "description": "Selezioni Mantovane per esaltare ogni piatto",
+      "active": true,
+      "active_begin": null,
+      "active_end": null,
+      "active_days": 0,
+      "sort": 5,
+      "picture_id": null,
+      "hidden_until": null,
+      "active_exact_from": null,
+      "active_exact_until": null,
+      "major_group_id": 76587,
+      "items": [
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "2"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 19919492,
+          "menu_category_id": 3519078,
+          "name": "Lugana DOC",
+          "description": "Un vino bianco secco e fresco, tipico della zona del Lago di Garda, caratterizzato da note fruttate e floreali, con una leggera mineralità che lo rende elegante e armonioso. Perfetto come aperitivo o in abbinamento a piatti di pesce e piatti freschi.",
+          "price": 12,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 0,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "2"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 19919493,
+          "menu_category_id": 3519078,
+          "name": "Custoza DOC",
+          "description": "Un vino bianco aromatico e fresco, proveniente dalle colline veronesi, con note di fiori bianchi, frutta e una leggera sapidità. Elegante e versatile, si abbina perfettamente a piatti di pesce, antipasti leggeri e piatti della tradizione mediterranea.",
+          "price": 13,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 1,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "1,5"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 19919501,
+          "menu_category_id": 3519078,
+          "name": "Colli Mantovani Bianco DOC",
+          "description": "Un vino bianco fresco e fruttato, proveniente dalle colline mantovane, con note di mela verde, agrumi e una leggera mineralità. Perfetto come aperitivo o in abbinamento a piatti di pesce, antipasti freschi e piatti a base di verdure.",
+          "price": 14,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 2,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "75"
+              },
+              {
+                "id": 10,
+                "value": "2"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 20045812,
+          "menu_category_id": 3519078,
+          "name": "Garda Chardonnay DOC",
+          "description": "Un vino bianco elegante e profumato, con note di frutta matura, come mela e pera, e un delicato retrogusto di fiori bianchi. La sua freschezza e la buona struttura lo rendono ideale per accompagnare piatti a base di pesce, crostacei e formaggi freschi.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 3,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "4"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 20045824,
+          "menu_category_id": 3519078,
+          "name": "Lambrusco Mantovano DOC",
+          "description": "Un vino rosso frizzante, vivace e fresco, caratterizzato da note di frutti rossi, come ciliegia e lampone, con una leggera nota floreale. Il suo sapore armonico e leggermente dolce lo rende perfetto per accompagnare salumi, formaggi stagionati e piatti tipici della cucina mantovana.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 4,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "2"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 20045826,
+          "menu_category_id": 3519078,
+          "name": "Merlot Garda DOC",
+          "description": "U: un vino rosso elegante e corposo, con note di frutti rossi maturi, come ciliegia e prugna, e un delicato sentore di spezie. La sua struttura vellutata e il retrogusto lungo lo rendono ideale per accompagnare piatti di carne, arrosti e formaggi stagionati.",
+          "price": 14,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 5,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        },
+        {
+          "extras": {
+            "sku": "",
+            "menu_item_allergens_ids": [
+              4679
+            ],
+            "menu_item_nutritional_values": [
+              {
+                "id": 9,
+                "value": "70"
+              },
+              {
+                "id": 10,
+                "value": "3"
+              },
+              {
+                "id": 11,
+                "value": "0"
+              },
+              {
+                "id": 12,
+                "value": "0"
+              },
+              {
+                "id": 13,
+                "value": "0"
+              },
+              {
+                "id": 14,
+                "value": "0"
+              }
+            ],
+            "menu_item_nutritional_values_size": "per_100g",
+            "menu_item_allergens_values": [
+              {
+                "id": 4679,
+                "name": "Anidride solforosa e solfiti"
+              }
+            ]
+          },
+          "id": 20045828,
+          "menu_category_id": 3519078,
+          "name": "Colli Mantovani Rosso DOC",
+          "description": "Un vino rosso intenso e ben strutturato, con note di frutti rossi maturi e leggeri accenni speziati. Il suo sapore equilibrato e tannico lo rende perfetto per accompagnare piatti a base di carne, arrosti, stufati e formaggi stagionati.",
+          "price": 15,
+          "active": true,
+          "active_begin": null,
+          "active_end": null,
+          "active_days": 127,
+          "sort": 6,
+          "tags": [],
+          "hidden_until": null,
+          "tax_category_id": 393118,
+          "hide_instructions": true,
+          "active_exact_from": null,
+          "active_exact_until": null,
+          "ingredients": "",
+          "additives": "",
+          "restaurant_menu_availabilities": [],
+          "sizes": [],
+          "groups": [],
+          "is_out_of_stock": false
+        }
+      ],
+      "groups": []
+    }
+  ],
+  "currency_config": {
+    "created_at": "2020-02-12T15:38:11.000Z",
+    "updated_at": "2020-02-12T15:38:11.000Z",
+    "currency": "EUR",
+    "decimals": 2,
+    "createdAt": "2020-02-12T15:38:11.000Z",
+    "updatedAt": "2020-02-12T15:38:11.000Z"
+  }
+}

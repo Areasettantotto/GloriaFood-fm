@@ -1,9 +1,9 @@
-// src/App.js
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
+  Link,
 } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
@@ -13,6 +13,24 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import NotFound from './pages/NotFound'
 import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
+
+export const HoverLink = ({ className = '', ...props }) => {
+  return (
+    <a
+      {...props}
+      className={`no-underline transition-colors duration-300 hover:text-accent ${className}`}
+    />
+  )
+}
+
+export const HoverLinkRouter = ({ className = '', ...props }) => {
+  return (
+    <Link
+      {...props}
+      className={`no-underline transition-colors duration-300 hover:text-accent ${className}`}
+    />
+  )
+}
 
 function App() {
   const location = useLocation() // Get current position for conditional animations

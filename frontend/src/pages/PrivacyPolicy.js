@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Banner from '../components/Banner'
 import siteConfig from '../config/siteConfig.json'
 import { pageVariants, pageTransition } from '../config/motionConfig'
+import { HoverLink } from '../App'
 
 const PrivacyPolicy = () => {
   return (
@@ -118,12 +119,9 @@ const PrivacyPolicy = () => {
               <p>
                 Se hai domande o dubbi riguardo alla nostra politica sulla
                 privacy, non esitare a contattarci via email a:{' '}
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-blue-600"
-                >
+                <HoverLink href={`mailto:${siteConfig.email}`}>
                   {siteConfig.email}
-                </a>
+                </HoverLink>
                 .
               </p>
             </section>

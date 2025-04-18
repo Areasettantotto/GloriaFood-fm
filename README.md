@@ -30,7 +30,7 @@ npm start
 ```bash
 cd backend
 npm install
-npm start
+npm run dev
 ```
 
 #### Note: Rename (env.example.txt) or create a .env file in the backend dir (local use):
