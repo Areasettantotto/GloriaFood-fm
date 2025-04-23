@@ -1,0 +1,44 @@
+name: CI/CD DockerHub + Render
+
+on:
+  push:
+    branches:
+      - main  # Edit if you use another branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Login DockerHub
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 3. Build & Push Frontend
+      - name: Build & Push Frontend Image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/frontend-1:latest ./frontend
+          docker push ${{ secrets.DOCKER_USERNAME }}/frontend-1:latest
+
+      # 4. Build & Push Backend
+      - name: Build & Push Backend Image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-1:latest ./backend
+          docker push ${{ secrets.DOCKER_USERNAME }}/backend-1:latest
+
+      # 5. Trigger Render Frontend Deploy
+      - name: Deploy Frontend on Render
+        run: |
+          curl -X POST ${{ secrets.FRONTEND_DEPLOY_HOOK }}
+
+      # 6. Trigger Render Backend Deploy
+      - name: Deploy Backend on Render
+        run: |
+          curl -X POST ${{ secrets.BACKEND_DEPLOY_HOOK }}

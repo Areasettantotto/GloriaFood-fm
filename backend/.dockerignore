@@ -1,0 +1,7 @@
+.git
+/backend/.env*
+node_modules
+npm-debug.log*
+Dockerfile
+.dockerignore
+logs
