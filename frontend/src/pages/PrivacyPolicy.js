@@ -1,10 +1,16 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
+import wakeupBackend from '../api/backendWakeup'
 import Banner from '../components/Banner'
 import siteConfig from '../config/siteConfig.json'
 import { pageVariants, pageTransition } from '../config/motionConfig'
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    wakeupBackend()
+  }, [])
+
   return (
     <HelmetProvider>
       <motion.div

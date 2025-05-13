@@ -7,9 +7,14 @@ import Banner from '../components/Banner'
 import GlobalLoader from '../components/GlobalLoader'
 import CookieConsent from '../components/CookieConsent'
 import PhotoGallery from '../components/PhotoGallery'
+import wakeupBackend from '../api/backendWakeup'
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    wakeupBackend()
+  }, [])
 
   useEffect(() => {
     const images = document.querySelectorAll('img')
