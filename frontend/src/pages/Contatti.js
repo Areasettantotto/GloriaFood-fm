@@ -7,9 +7,14 @@ import GlobalLoader from '../components/GlobalLoader'
 import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import OpeningHours from '../components/OpeningHours'
 import { pageVariants, pageTransition } from '../config/motionConfig'
+import wakeupBackend from '../api/backendWakeup'
 
 function Contatti() {
   const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    wakeupBackend()
+  }, [])
 
   useEffect(() => {
     const bannerVideo = document.querySelector('#banner-video')
