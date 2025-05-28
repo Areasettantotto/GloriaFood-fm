@@ -133,7 +133,7 @@ const Menu = () => {
 
           <div className="ml-4">
             <FaShoppingCart
-              className="text-2xl text-gray-500 cursor-pointer"
+              // className="text-2xl text-gray-500 cursor-pointer"
               title="Carrello"
               onClick={() => alert('Apertura carrello...')}
             />
