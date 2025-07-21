@@ -4,7 +4,7 @@ import useSWR from 'swr'
 import siteConfig from '../config/siteConfig.json'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { FaShoppingCart } from 'react-icons/fa'
+// import { FaShoppingCart } from 'react-icons/fa'
 import Banner from '../components/Banner'
 import MenuCard from '../components/MenuCard'
 import backendUrl from '../config/config.js'
@@ -132,11 +132,11 @@ const Menu = () => {
           </div>
 
           <div className="ml-4">
-            <FaShoppingCart
-              // className="text-2xl text-gray-500 cursor-pointer"
+            {/* <FaShoppingCart
+              className="text-2xl text-gray-500 cursor-pointer"
               title="Carrello"
               onClick={() => alert('Apertura carrello...')}
-            />
+            /> */}
           </div>
         </div>
 
