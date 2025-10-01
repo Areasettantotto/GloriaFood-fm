@@ -1,6 +1,10 @@
 # Use lightweight Node.js image
 FROM node:23-alpine
 
+# Aggiorna pacchetti di sistema e OpenSSL (fix per CVE-2025-9230)
+RUN apk update && apk upgrade --no-cache && \
+  apk add --no-cache openssl
+
 # Set working directory
 WORKDIR /app
 
@@ -8,7 +12,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --omit=dev
 
 # Copy all source code
 COPY . .
@@ -18,3 +22,4 @@ EXPOSE 4000
 
 # Start backend
 CMD ["npm", "start"]
+
