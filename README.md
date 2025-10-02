@@ -33,7 +33,7 @@ npm install
 npm start
 ```
 
-#### Note: Rename (env.example.txt) or create a .env file in the backend dir (local use):
+#### Note: Rename (.env.example) or create a .env file in the backend dir (local use):
 
 ```sh
 GLORIAFOOD_API_KEY=your_api_key_here
